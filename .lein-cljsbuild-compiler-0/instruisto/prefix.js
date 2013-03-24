@@ -6,13 +6,13 @@ goog.require('domina');
 goog.require('goog.net.XhrIo');
 instruisto.prefix.prefix_map = cljs.core.ObjMap.fromObject(["\uFDD0'prefix"],{"\uFDD0'prefix":cljs.core.ObjMap.fromObject(["\uFDD0'title","\uFDD0'body","\uFDD0'next"],{"\uFDD0'title":"Prefix System","\uFDD0'body":"Remember the word malgrandajn in the plurals review section? Malgranda doesn't mean big and bad, mal is a prefix that negates a root word. Like in English where you might use un- to denote the opposite of something ie. tie or untie. The meat and potatoes of Esperanto are the prefix and suffix system it uses. By knowing one word, in this case granda which means large, with only the addition of mal-, malgranda means small. You may see the power of Esperanto is knowing a limited set of root words, but with added prefixes and suffixes your vocabulary can increased ten fold. Master these, and you'll have a considerable amount of Esperanto under your belt.","\uFDD0'next":""})});
 instruisto.prefix.load_next_section = (function load_next_section(m){
-var entry_map__26577 = (((m == null))?cljs.core._lookup.call(null,instruisto.prefix.prefix_map,cljs.core.keyword.call(null,domina.attr.call(null,domina.by_id.call(null,"prefix-link"),"title")),null):m);
-var elem_title__26578 = domina.by_id.call(null,"prefix-title");
-var elem_body__26579 = domina.by_id.call(null,"prefix-body");
-var elem_link__26580 = domina.by_id.call(null,"prefix-link");
-domina.set_text_BANG_.call(null,elem_title__26578,(new cljs.core.Keyword("\uFDD0'title")).call(null,entry_map__26577));
-domina.set_text_BANG_.call(null,elem_body__26579,(new cljs.core.Keyword("\uFDD0'body")).call(null,entry_map__26577));
-return domina.set_attr_BANG_.call(null,elem_link__26580,"title",(new cljs.core.Keyword("\uFDD0'next")).call(null,entry_map__26577));
+var entry_map__6573 = (((m == null))?cljs.core._lookup.call(null,instruisto.prefix.prefix_map,cljs.core.keyword.call(null,domina.attr.call(null,domina.by_id.call(null,"prefix-link"),"title")),null):m);
+var elem_title__6574 = domina.by_id.call(null,"prefix-title");
+var elem_body__6575 = domina.by_id.call(null,"prefix-body");
+var elem_link__6576 = domina.by_id.call(null,"prefix-link");
+domina.set_text_BANG_.call(null,elem_title__6574,(new cljs.core.Keyword("\uFDD0'title")).call(null,entry_map__6573));
+domina.set_text_BANG_.call(null,elem_body__6575,(new cljs.core.Keyword("\uFDD0'body")).call(null,entry_map__6573));
+return domina.set_attr_BANG_.call(null,elem_link__6576,"title",(new cljs.core.Keyword("\uFDD0'next")).call(null,entry_map__6573));
 });
 instruisto.prefix.start_prefix = (function start_prefix(){
 instruisto.prefix.load_next_section.call(null,(new cljs.core.Keyword("\uFDD0'prefix")).call(null,instruisto.prefix.prefix_map));

@@ -6,13 +6,13 @@ goog.require('domina');
 goog.require('goog.net.XhrIo');
 instruisto.suffix.suffix_map = cljs.core.ObjMap.fromObject(["\uFDD0'suffix"],{"\uFDD0'suffix":cljs.core.ObjMap.fromObject(["\uFDD0'title","\uFDD0'body","\uFDD0'next"],{"\uFDD0'title":"Suffix System","\uFDD0'body":"The suffix system is the same as the prefix system, in that it transforms root words to other forms of the same word. There are roughly 4 times as many suffixes as prefixes. Just like the prefixes, the suffixes require mastery in order to fully understand Esperanto.","\uFDD0'next":""})});
 instruisto.suffix.load_next_section = (function load_next_section(m){
-var entry_map__270165 = (((m == null))?cljs.core._lookup.call(null,instruisto.suffix.suffix_map,cljs.core.keyword.call(null,domina.attr.call(null,domina.by_id.call(null,"suffix-link"),"title")),null):m);
-var elem_title__270166 = domina.by_id.call(null,"suffix-title");
-var elem_body__270167 = domina.by_id.call(null,"suffix-body");
-var elem_link__270168 = domina.by_id.call(null,"suffix-link");
-domina.set_text_BANG_.call(null,elem_title__270166,(new cljs.core.Keyword("\uFDD0'title")).call(null,entry_map__270165));
-domina.set_text_BANG_.call(null,elem_body__270167,(new cljs.core.Keyword("\uFDD0'body")).call(null,entry_map__270165));
-return domina.set_attr_BANG_.call(null,elem_link__270168,"title",(new cljs.core.Keyword("\uFDD0'next")).call(null,entry_map__270165));
+var entry_map__6591 = (((m == null))?cljs.core._lookup.call(null,instruisto.suffix.suffix_map,cljs.core.keyword.call(null,domina.attr.call(null,domina.by_id.call(null,"suffix-link"),"title")),null):m);
+var elem_title__6592 = domina.by_id.call(null,"suffix-title");
+var elem_body__6593 = domina.by_id.call(null,"suffix-body");
+var elem_link__6594 = domina.by_id.call(null,"suffix-link");
+domina.set_text_BANG_.call(null,elem_title__6592,(new cljs.core.Keyword("\uFDD0'title")).call(null,entry_map__6591));
+domina.set_text_BANG_.call(null,elem_body__6593,(new cljs.core.Keyword("\uFDD0'body")).call(null,entry_map__6591));
+return domina.set_attr_BANG_.call(null,elem_link__6594,"title",(new cljs.core.Keyword("\uFDD0'next")).call(null,entry_map__6591));
 });
 instruisto.suffix.start_suffix = (function start_suffix(){
 instruisto.suffix.load_next_section.call(null,(new cljs.core.Keyword("\uFDD0'suffix")).call(null,instruisto.suffix.suffix_map));

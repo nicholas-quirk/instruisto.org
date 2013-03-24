@@ -5,10 +5,12 @@ goog.require('instruisto.basic_grammar_review_2');
 goog.require('instruisto.introduction');
 goog.require('domina.events');
 goog.require('instruisto.alphabet');
+goog.require('instruisto.prefix_review');
 goog.require('instruisto.plural_review');
 goog.require('instruisto.prefix');
 goog.require('instruisto.basic_grammar');
 goog.require('domina');
+goog.require('instruisto.suffix_review');
 goog.require('instruisto.effects');
 goog.require('goog.net.XhrIo');
 goog.require('instruisto.suffix');
@@ -69,9 +71,17 @@ domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-prefix"),"\uFD
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"prefix-section"));
 return instruisto.prefix.start_prefix.call(null);
 }));
-return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-suffix"),"\uFDD0'click",(function (event){
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-prefix-review"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"prefix-review-section"));
+return instruisto.prefix_review.start_prefix_review.call(null);
+}));
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-suffix"),"\uFDD0'click",(function (event){
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"suffix-section"));
 return instruisto.suffix.start_suffix.call(null);
+}));
+return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-suffix-review"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"suffix-review-section"));
+return instruisto.suffix_review.start_suffix_review.call(null);
 }));
 });
 goog.exportSymbol('instruisto.client.main', instruisto.client.main);

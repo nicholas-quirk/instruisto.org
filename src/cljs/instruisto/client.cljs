@@ -10,7 +10,9 @@
             [instruisto.plural :as plural]
             [instruisto.plural-review :as plural-review]
             [instruisto.prefix :as prefix]
+            [instruisto.prefix-review :as prefix-review]
             [instruisto.suffix :as suffix]
+            [instruisto.suffix-review :as suffix-review]
             [instruisto.effects :as effects]))
 
 (defn click-defaults [event elem]
@@ -91,9 +93,19 @@
                 (fn [event]
                   (click-defaults event (d/by-id "prefix-section"))
                   (prefix/start-prefix)))
+     (events/listen! (d/by-id "link-prefix-review")
+                :click
+                (fn [event]
+                  (click-defaults event (d/by-id "prefix-review-section"))
+                  (prefix-review/start-prefix-review)))
      (events/listen! (d/by-id "link-suffix")
                 :click
                 (fn [event]
                   (click-defaults event (d/by-id "suffix-section"))
                   (suffix/start-suffix)))
+     (events/listen! (d/by-id "link-suffix-review")
+                :click
+                (fn [event]
+                  (click-defaults event (d/by-id "suffix-review-section"))
+                  (suffix-review/start-suffix-review)))
    )
