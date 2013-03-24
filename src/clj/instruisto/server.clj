@@ -12,9 +12,9 @@
   (route/resources "/"))
 
 (defn -main [port]
-  (models/initialize)
+;  (models/initialize)
   ;(let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
-  (run-jetty app {:port (Integer. port)}));)
+  (jetty/run-jetty app {:port (Integer. port)}));)
 
 ;(defn -main []
 ;  (jetty/run-jetty app {:join? true :port 5000}))
