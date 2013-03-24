@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Cantarell';
+    src: url('fonts/Cantarell-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Cantarell-Bold';
+    src: url('fonts/Cantarell-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Cantarell-Oblique';
+    src: url('fonts/Cantarell-Oblique.ttf');
+}
+
+body {
+    background-color: #BFE3BA;
+    font-family: Cantarell, Tahoma, Geneva, sans-serif;
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+}
+
+input {
+	border: 2px solid black;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding: 5px;
+	margin-left: 5px;
+}
+
+h1 {
+	text-align: center;
+    font-family: Cantarell-Bold;
+}
+
+h2 {
+	text-align: center;
+    font-family: Cantarell-Oblique;
+}
+
+a { text-decoration: none; }
+
+a:link, a:visited, a:hover, a:active { color: #FFFFFF }
+
+.bold {
+	font-weight: bold;
+}
+
+div.sub_cat>a {
+	margin:20px;
+}
+
+div.formatted_text {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+#nav_panel {
+	width: 200px;
+	border: 2px solid black;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	margin-botton: 10px;
+	background-color: white;
+}
+
+#nav_panel>div {
+	width: 170px;
+	border: 2px solid black;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding: 5px;
+	margin: 5px;
+	background-color: grey;
+}
+
+#content_panel {
+	width: 700px;
+}
+
+#content_panel>section {
+	border: 2px solid black;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 10px;
+	background-color: white;
+}
+
+div {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.float_left {
+	display: inline;
+	float: left;
+	padding: 5px;
+}
+
+.next_button {
+	display: inline;
+	float: right;
+	border: 2px solid black;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 10px;
+	background-color: grey;
+}
+
+#alphabet-table {
+	width: 100%;
+	font-size: 12pt;
+}
+
+#alphabet-extra-table {
+	width: 100%;
+	font-size: 12pt;
+}
+
+.float_right {
+	display: inline;
+	float: right;
+	padding: 5px;
+}
+
+.draggable {
+	width:200px;
+}
+
+.droppable {
+	width:50px;
+}
+
+.highlight_correct {
+	background-color: #BFE3BA;
+}
