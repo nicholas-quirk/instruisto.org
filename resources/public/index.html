@@ -24,7 +24,24 @@
 	</nav>
 	</div>
 	<div class="float_left" id="content_panel">
-	    <section id="introduction-section" style="display:none;" class="content-secton">
+	    <section id="for-langauge-learner-section" class="content-secton">
+	    	<h3 id="for-language-learner-header">For Language Learners</h3>
+	    	<h4 id="for-language-learner-title"></h4>
+            <p>I first came across Esperanto when I was in college. I wanted to learn a language for fun, and I think like many in my position Google searched for "easiest language to learn" or "easiest language for native English speakers to learn". Somewhere in those search results Esperanto was mentioned and I checked it out. I tried learning it from lernu.net. I eventually gave up, probably due to my college work load and a frustration with myself for not learning faster enough. Fast forward three to four years later (2012). I'm a full time programmer learning new programming technologies in my spare time. I'm constantly reading about new programming languages and working on side projects. I'm starting to feel brittle. My thinking is all one sided, it's all logic. I needed something different to flex my brain. I started the same Google searches again, and landed on the same language. Esperanto was the only one with a philosophy. It was a language that had a purpose.</p>
+            <p>I think anyone coming to this language would share the same sentiment. Anyone interested in learning Esperanto would want to learn a language to support the greater good. To learn something that was created for the whole world. It's an international auxiliary language that facilitates openness.</p>
+            <p>What this site is: This site is meant to be an introduction I wish I had. I wanted to create a concise, easy-to-use, step-by-step approach. All one has to do is follow each module down the list. The reading modules should take no more than 5 minutes and the review modules should take no more than 10-15 minutes. I also want this site to be a review/reference guide as you further your learning. Please check out the additional resources on the site. I've included the ones that I think I would benefit you the most in the least amount of time.</p>
+            <p>What this site is not: This site is not a complete course of Esperanto. It's not an experts approach at teaching people the language. At its current state, I make no claim that this will make you proficient in reading, writing or speaking Esperanto. Think of it as a place to wet your appetite and review concepts.<p/>
+	    </section>
+	    <section id="for-programmer-section" class="content-secton">
+	    	<h3 id="for-programmer-header">For Programmers</h3>
+	    	<h4 id="for-programmer-title"></h4>
+	    	<p id="for-programmer-body">
+            <p>From the users point of view, this is a basic HTML/JavaScript site. In actuality, this site is written in ClojureScript. I came to Clojure a year ago while exploring functional programming languages. Being a Java developer, I was very interested in this new JVM language. I wrote my first personal website in Clojure, and found ClojureScript to be intriguing.</p>
+            <p>This site has two purposes. The first being an introduction site to Esperanto. One in which I think the community very much needs, even though this may not be that site. Secondly, this is a proof of concept at least to myself that one can write a single page application. This is a very basic proof. Most of the material is contained within the HTML, but the state changes and dynamic features are written with ClojureScript which compiles to JavaScript.</p>
+            <p>This has been a labor of intellectual pursuits. I've been selfish in building this site around a new technology that may not last, or that I may lose interest in. I hope this will at least spark interest in language learners wanting to learn Esperanto, or programmers that should give functional programming a chance (even though my ClojureScript isn't very functional).<p/>
+            <p>As a side note, this site by it's nature solves two problems which I find interesting. The first one is that it can be used entirely off-line. Once all the pages are cached (which aren't many), the site is still completely functional. Secondly, because you get the site in one download from the start there is no drain on mobile devices batteries. All network usage required for the site is paid on the initial page load.</p>
+	    </section>
+        <section id="introduction-section" style="display:none;" class="content-secton">
 	    	<h3 id="introduction-header">Introduction</h3>
 	    	<h4 id="introduction-title"></h4>
 	    	<p id="introduction-body"><p/>
@@ -105,11 +122,14 @@
 	    				<tr>
 	    					<td class="bold">oj</td><td>like the oy in boy</td>
 	    				</tr>
+                        <tr>
+                            <td class="bold">uj</td><td>like ooey in gooey</td>
+                        </tr>
 	    				<tr>
-	    					<td class="bold">aux</td><td>like the ow in brown</td>
+	    					<td class="bold">a&#365;</td><td>like the ow in brown</td>
 	    				</tr>
 	    				<tr>
-	    					<td class="bold">eux</td><td>like the ayw in wayward</td>
+	    					<td class="bold">e&#365;</td><td>like the ayw in wayward</td>
 	    				</tr>    	    								    				
 	    			</tbody>
 	    		</table>
@@ -209,26 +229,77 @@
 		<section id="prefix-review-section" style="display:none;" class="content-secton">
 	    	<h3 id="prefix-review-header">Prefix Review</h3>
 	    	<h4 id="prefix-review-title"></h4>
-			<div class="float_left draggable" id="prefix-bo-drag">bo-</div><div class="float_right droppable" id="prefix-bo-drop" style="width:300px;">relative by marriage, in-law</div>
+	    	<div class="float_left">
+	    		<div class="float_left draggable" id="prefix-bo-drag">bo-</div>
+				<br style="clear:both;"/>
+	    		<div class="float_left draggable" id="prefix-dis-drag">dis-</div>
+				<br style="clear:both;"/>
+	    		<div class="float_left draggable" id="prefix-ek-drag">ek-</div>
+				<br style="clear:both;"/>
+	    		<div class="float_left draggable" id="prefix-eks-drag">eks-</div>
+				<br style="clear:both;"/>
+	    		<div class="float_left draggable" id="prefix-fi-drag">fi-</div>
+				<br style="clear:both;"/>
+	    		<div class="float_left draggable" id="prefix-ge-drag">ge-</div>
+				<br style="clear:both;"/>
+	    		<div class="float_left draggable" id="prefix-mal-drag">mal-</div>
+				<br style="clear:both;"/>
+	    		<div class="float_left draggable" id="prefix-mis-drag">mis-</div>
+				<br style="clear:both;"/>
+	    		<div class="float_left draggable" id="prefix-pra-drag">pra-</div>
+				<br style="clear:both;"/>
+	    		<div class="float_left draggable" id="prefix-re-drag">re-</div>
+				<br style="clear:both;"/>	    		
+	    	</div>
+			<div class="float_left">
+				<br style="clear:both;"/>
+			</div>
+			<div class="float_right" id="prefix_def_ordered">
+				<div class="float_right droppable prefix_def" style="width:300px;">relative by marriage, in-law</div>
+				<br style="clear:both;"/>			
+				<div class="float_right droppable prefix_def" style="width:300px;">separation, dispersal, dis-</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" style="width:300px;">commencement, suddenness</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" style="width:300px;">former, ex-</div>
+		    	<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" style="width:300px;">filthy, disgusting, pornographic</div>
+		    	<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" style="width:300px;">both sexes together</div>
+		    	<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" style="width:300px;">direct opposite, in-</div>
+		    	<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" style="width:300px;">wrong, mis-</div>
+		    	<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" style="width:300px;">primordiality, remoteness of relationship</div>
+		    	<br style="clear:both;"/>	    		    		    		    	
+		    	<div class="float_right droppable prefix_def" style="width:300px;">return, repetition, re-</div>
+				<br style="clear:both;"/>
+			</div>
+			<div class="float_right" id="prefix_def_random" style="display:none;">
+				<div class="float_right droppable prefix_def" id="prefix-mal-drop" style="width:300px;">direct opposite, in-</div>
+		    	<br style="clear:both;"/>		    		    		    	
+		    	<div class="float_right droppable prefix_def" id="prefix-re-drop" style="width:300px;">return, repetition, re-</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" id="prefix-mis-drop" style="width:300px;">wrong, mis-</div>
+		    	<br style="clear:both;"/>				
+				<div class="float_right droppable prefix_def" id="prefix-ek-drop" style="width:300px;">commencement, suddenness</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" id="prefix-eks-drop" style="width:300px;">former, ex-</div>
+		    	<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" id="prefix-pra-drop" style="width:300px;">primordiality, remoteness of relationship</div>
+		    	<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" id="prefix-fi-drop" style="width:300px;">filthy, disgusting, pornographic</div>
+		    	<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" id="prefix-bo-drop" style="width:300px;">relative by marriage, in-law</div>
+				<br style="clear:both;"/>			
+				<div class="float_right droppable prefix_def" id="prefix-dis-drop" style="width:300px;">separation, dispersal, dis-</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable prefix_def" id="prefix-ge-drop" style="width:300px;">both sexes together</div>
+		    	<br style="clear:both;"/>
+			</div>
 			<br style="clear:both;"/>
-			<div class="float_left draggable" id="prefix-dis-drag">dis-</div><div class="float_right droppable" id="prefix-dis-drop" style="width:300px;">separation, dispersal, dis-</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="prefix-ek-drag">ek-</div><div class="float_right droppable" id="prefix-ek-drop" style="width:300px;">commencement, suddenness</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="prefix-eks-drag">eks-</div><div class="float_right droppable" id="prefix-eks-drop" style="width:300px;">former, ex-</div>
-	    	<br style="clear:both;"/>
-			<div class="float_left draggable" id="prefix-fi-drag">fi-</div><div class="float_right droppable" id="prefix-fi-drop" style="width:300px;">filthy, disgusting, pornographic</div>
-	    	<br style="clear:both;"/>
-			<div class="float_left draggable" id="prefix-ge-drag">ge-</div><div class="float_right droppable" id="prefix-ge-drop" style="width:300px;">both sexes together</div>
-	    	<br style="clear:both;"/>
-			<div class="float_left draggable" id="prefix-mal-drag">mal-</div><div class="float_right droppable" id="prefix-mal-drop" style="width:300px;">direct opposite, in-</div>
-	    	<br style="clear:both;"/>
-			<div class="float_left draggable" id="prefix-mis-drag">mis-</div><div class="float_right droppable" id="prefix-mis-drop" style="width:300px;">wrong, mis-</div>
-	    	<br style="clear:both;"/>
-			<div class="float_left draggable" id="prefix-pra-drag">pra-</div><div class="float_right droppable" id="prefix-pra-drop" style="width:300px;">primordiality, remoteness of relationship</div>
-	    	<br style="clear:both;"/>	    		    		    		    	
-	    	<div class="float_left draggable" id="prefix-re-drag">re-</div><div class="float_right droppable" id="prefix-re-drop" style="width:300px;">return, repetition, re-</div>
-			<br style="clear:both;"/>
+			<a href="#" title="" id="prefix-start-link" class="next_button">start</a>
 	    </section>
 		<section id="suffix-section" style="display:none;" class="content-secton">
 	    	<h3 id="suffix-header">Suffix (Sufikso)</h3>
@@ -239,73 +310,208 @@
 		<section id="suffix-review-section" style="display:none;" class="content-secton">
 	    	<h3 id="suffix-review-header">Suffix Review</h3>
 	    	<h4 id="suffix-review-title"></h4>
-			<div class="float_left draggable" id="suffix—acx—drag">—a&#265;—</div><div class="float_right droppable" id="suffix—acx—drop" style="width:300px;">disparagement, contempt, dislike, wretched, vile, awful</div>
+	    	<div class="float_left">	    	
+				<div class="float_left draggable" id="suffix-acx-drag">-a&#265;-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-ad-drag">-ad-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-ajx-drag">-a&#309;-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-an-drag">-an-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-ar-drag">-ar-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-ebl-drag">-ebl-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-ec-drag">-ec-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-eg-drag">-eg-</div>
+				<br style="clear:both;"/>	
+				<div class="float_left draggable" id="suffix-ej-drag">-ej-</div>
+				<br style="clear:both;"/>	
+				<div class="float_left draggable" id="suffix-em-drag">-em-</div>
+				<br style="clear:both;"/>				
+				<div class="float_left draggable" id="suffix-end-drag">-end-</div>
+				<br style="clear:both;"/>						
+				<div class="float_left draggable" id="suffix-er-drag">-er-</div>
+				<br style="clear:both;"/>						
+				<div class="float_left draggable" id="suffix-estr-drag">-estr-</div>
+				<br style="clear:both;"/>						
+				<div class="float_left draggable" id="suffix-et-drag">-et-</div>
+				<br style="clear:both;"/>	
+				<div class="float_left draggable" id="suffix-id-drag">-id-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-ig-drag">-ig-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-igx-drag">-i&#285;-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-il-drag">-il-</div>
+				<br style="clear:both;"/>			
+				<div class="float_left draggable" id="suffix-in-drag">-in-</div>
+				<br style="clear:both;"/>		
+				<div class="float_left draggable" id="suffix-ind-drag">-ind-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-ing-drag">-ing-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-ism-drag">-ism-</div>
+				<br style="clear:both;"/>	
+				<div class="float_left draggable" id="suffix-ist-drag">-ist-</div>
+				<br style="clear:both;"/>	
+				<div class="float_left draggable" id="suffix-obl-drag">-obl-</div>
+				<br style="clear:both;"/>	
+				<div class="float_left draggable" id="suffix-on-drag">-on-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-op-drag">-op-</div>
+				<br style="clear:both;"/>	
+				<div class="float_left draggable" id="suffix-uj-drag">-uj-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-ul-drag">-ul-</div>
+				<br style="clear:both;"/>	
+				<div class="float_left draggable" id="suffix-um-drag">-um-</div>
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="suffix-cxj-drag">-c&#309;-</div>
+				<br style="clear:both;"/>		
+				<div class="float_left draggable" id="suffix-nj-drag">-nj-</div>
+				<br style="clear:both;"/>
+			</div>
+			<div class="float_left">
+				<br style="clear:both;"/>
+			</div>
+			<div class="float_right" id="suffix_def_ordered">
+				<div class="float_right droppable" style="width:300px;">disparagement, contempt, dislike, wretched, vile, awful</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">(adds the idea of action) action, particularly prolonged, repeated, or habitual</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">denotes concrete idea</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">member (of a group), inhabitant (of a country)</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">collection (group, set) of (several or all) units of the same kind</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">denotes possibility, -able, -ible</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">denotes quality or state (in abstract form), -ship, -ness</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">great in size or degree</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" style="width:300px;">place (with verb root) where an action occurs</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" style="width:300px;">denotes an inclination, bent, bias, proclivity, leaning, -full</div>
+				<br style="clear:both;"/>				
+				<div class="float_right droppable" style="width:300px;">which-must-be-done</div>
+				<br style="clear:both;"/>						
+				<div class="float_right droppable" style="width:300px;">denotes element or unit of homogeneous whole</div>
+				<br style="clear:both;"/>						
+				<div class="float_right droppable" style="width:300px;">leader, head, -boss-, ruler, commander, chief</div>
+				<br style="clear:both;"/>						
+				<div class="float_right droppable" style="width:300px;">dimunitive; weakens the idea of the root to a high degree</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" style="width:300px;">offspring of living creatures</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">make, cause to be, render, -ify</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">become, come to be, get, grow, turn</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">object used to perform an action, appliance, tool, implement, instrument</div>
+				<br style="clear:both;"/>			
+				<div class="float_right droppable" style="width:300px;">denotes female, feminine</div>
+				<br style="clear:both;"/>		
+				<div class="float_right droppable" style="width:300px;">worthy of, deserving of</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">holder for one object (sheath, socket, stand)</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">doctrine, movement, theory, system, -ism</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" style="width:300px;">person connected with the root, usually by profession (business, calling, vocation, habitual interest)</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" style="width:300px;">denotes multiplication, -ple</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" style="width:300px;">denotes fraction, -th</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">collective numeral (number of elements together, in a group)</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" style="width:300px;">container, receptacle, holder (also countries)</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">denotes individual (person)</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" style="width:300px;">no definite meaning: sense is defined by usage or context</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" style="width:300px;">affectionate endings (male)</div>
+				<br style="clear:both;"/>		
+				<div class="float_right droppable" style="width:300px;">affectionate endings (female)</div>
+				<br style="clear:both;"/>
+			</div>
+			<div class="float_right" id="suffix_def_random" style="display:none;">
+				<div class="float_right droppable" id="suffix-acx-drop" style="width:300px;">disparagement, contempt, dislike, wretched, vile, awful</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-ad-drop" style="width:300px;">(adds the idea of action) action, particularly prolonged, repeated, or habitual</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-ajx-drop" style="width:300px;">denotes concrete idea</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-an-drop" style="width:300px;">member (of a group), inhabitant (of a country)</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-ar-drop" style="width:300px;">collection (group, set) of (several or all) units of the same kind</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-ebl-drop" style="width:300px;">denotes possibility, -able, -ible</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-ec-drop" style="width:300px;">denotes quality or state (in abstract form), -ship, -ness</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-eg-drop" style="width:300px;">great in size or degree</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" id="suffix-ej-drop" style="width:300px;">place (with verb root) where an action occurs</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" id="suffix-em-drop" style="width:300px;">denotes an inclination, bent, bias, proclivity, leaning, -full</div>
+				<br style="clear:both;"/>				
+				<div class="float_right droppable" id="suffix-end-drop" style="width:300px;">which-must-be-done</div>
+				<br style="clear:both;"/>						
+				<div class="float_right droppable" id="suffix-er-drop" style="width:300px;">denotes element or unit of homogeneous whole</div>
+				<br style="clear:both;"/>						
+				<div class="float_right droppable" id="suffix-estr-drop" style="width:300px;">leader, head, -boss-, ruler, commander, chief</div>
+				<br style="clear:both;"/>						
+				<div class="float_right droppable" id="suffix-et-drop" style="width:300px;">dimunitive; weakens the idea of the root to a high degree</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" id="suffix-id-drop" style="width:300px;">offspring of living creatures</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-ig-drop" style="width:300px;">make, cause to be, render, -ify</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-igx-drop" style="width:300px;">become, come to be, get, grow, turn</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-il-drop" style="width:300px;">object used to perform an action, appliance, tool, implement, instrument</div>
+				<br style="clear:both;"/>			
+				<div class="float_right droppable" id="suffix-in-drop" style="width:300px;">denotes female, feminine</div>
+				<br style="clear:both;"/>		
+				<div class="float_right droppable" id="suffix-ind-drop" style="width:300px;">worthy of, deserving of</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-ing-drop" style="width:300px;">holder for one object (sheath, socket, stand)</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-ism-drop" style="width:300px;">doctrine, movement, theory, system, -ism</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" id="suffix-ist-drop" style="width:300px;">person connected with the root, usually by profession (business, calling, vocation, habitual interest)</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" id="suffix-obl-drop" style="width:300px;">denotes multiplication, -ple</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" id="suffix-on-drop" style="width:300px;">denotes fraction, -th</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-op-drop" style="width:300px;">collective numeral (number of elements together, in a group)</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" id="suffix-uj-drop" style="width:300px;">container, receptacle, holder (also countries)</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-ul-drop" style="width:300px;">denotes individual (person)</div>
+				<br style="clear:both;"/>	
+				<div class="float_right droppable" id="suffix-um-drop" style="width:300px;">no definite meaning: sense is defined by usage or context</div>
+				<br style="clear:both;"/>
+				<div class="float_right droppable" id="suffix-cxj-drop" style="width:300px;">affectionate endings (male)</div>
+				<br style="clear:both;"/>		
+				<div class="float_right droppable" id="suffix-nj-drop" style="width:300px;">affectionate endings (female)</div>
+				<br style="clear:both;"/>
+			</div>
 			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—ad—drag">—ad—</div><div class="float_right droppable" id="suffix—ad—drop" style="width:300px;">(adds the idea of action) action, particularly prolonged, repeated, or habitual</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—ajx—drag">—a&#309;—</div><div class="float_right droppable" id="suffix—ajx—drop" style="width:300px;">denotes concrete idea</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—an—drag">—an—</div><div class="float_right droppable" id="suffix—an—drop" style="width:300px;">member (of a group), inhabitant (of a country)</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—ar—drag">—ar—</div><div class="float_right droppable" id="suffix—ar—drop" style="width:300px;">collection (group, set) of (several or all) units of the same kind</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—ebl—drag">—ebl—</div><div class="float_right droppable" id="suffix—ebl—drop" style="width:300px;">denotes possibility, -able, -ible</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—ec—drag">—ec—</div><div class="float_right droppable" id="suffix—ec—drop" style="width:300px;">denotes quality or state (in abstract form), -ship, -ness</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—eg—drag">—eg—</div><div class="float_right droppable" id="suffix—eg—drop" style="width:300px;">great in size or degree</div>
-			<br style="clear:both;"/>	
-			<div class="float_left draggable" id="suffix—ej—drag">—ej—</div><div class="float_right droppable" id="suffix—ej—drop" style="width:300px;">place (with verb root) where an action occurs</div>
-			<br style="clear:both;"/>	
-			<div class="float_left draggable" id="suffix—em—drag">—em—</div><div class="float_right droppable" id="suffix—em—drop" style="width:300px;">denotes an inclination, bent, bias, proclivity, leaning, -full</div>
-			<br style="clear:both;"/>				
-			<div class="float_left draggable" id="suffix—end—drag">—end—</div><div class="float_right droppable" id="suffix—end—drop" style="width:300px;">which-must-be-done</div>
-			<br style="clear:both;"/>						
-			<div class="float_left draggable" id="suffix—er—drag">—er—</div><div class="float_right droppable" id="suffix—er—drop" style="width:300px;">denotes element or unit of homogeneous whole</div>
-			<br style="clear:both;"/>						
-			<div class="float_left draggable" id="suffix—estr—drag">—estr—</div><div class="float_right droppable" id="suffix—estr—drop" style="width:300px;">leader, head, “boss”, ruler, commander, chief</div>
-			<br style="clear:both;"/>						
-			<div class="float_left draggable" id="suffix—et—drag">—et—</div><div class="float_right droppable" id="suffix—et—drop" style="width:300px;">dimunitive; weakens the idea of the root to a high degree</div>
-			<br style="clear:both;"/>	
-			<div class="float_left draggable" id="suffix—id—drag">—id—</div><div class="float_right droppable" id="suffix—id—drop" style="width:300px;">offspring of living creatures</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—ig—drag">—ig—</div><div class="float_right droppable" id="suffix—ig—drop" style="width:300px;">make, cause to be, render, -ify</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—igx—drag">—i&#285;—</div><div class="float_right droppable" id="suffix—igx—drop" style="width:300px;">become, come to be, get, grow, turn</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—il—drag">—il—</div><div class="float_right droppable" id="suffix—il—drop" style="width:300px;">object used to perform an action, appliance, tool, implement, instrument</div>
-			<br style="clear:both;"/>			
-			<div class="float_left draggable" id="suffix—in—drag">—in—</div><div class="float_right droppable" id="suffix—in—drop" style="width:300px;">denotes female, feminine</div>
-			<br style="clear:both;"/>		
-			<div class="float_left draggable" id="suffix—ind—drag">—ind—</div><div class="float_right droppable" id="suffix—ind—drop" style="width:300px;">worthy of, deserving of</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—ing—drag">—ing—</div><div class="float_right droppable" id="suffix—ing—drop" style="width:300px;">holder for one object (sheath, socket, stand)</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—ism—drag">—ism—</div><div class="float_right droppable" id="suffix—ism—drop" style="width:300px;">doctrine, movement, theory, system, -ism</div>
-			<br style="clear:both;"/>	
-			<div class="float_left draggable" id="suffix—ist—drag">—ist—</div><div class="float_right droppable" id="suffix—ist—drop" style="width:300px;">person connected with the root, usually by profession (business, calling, vocation, habitual interest)</div>
-			<br style="clear:both;"/>	
-			<div class="float_left draggable" id="suffix—obl—drag">—obl—</div><div class="float_right droppable" id="suffix—obl—drop" style="width:300px;">denotes multiplication, -ple</div>
-			<br style="clear:both;"/>	
-			<div class="float_left draggable" id="suffix—on—drag">—on—</div><div class="float_right droppable" id="suffix—on—drop" style="width:300px;">denotes fraction, -th</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—op—drag">—op—</div><div class="float_right droppable" id="suffix—op—drop" style="width:300px;">collective numeral (number of elements together, in a group)</div>
-			<br style="clear:both;"/>	
-			<div class="float_left draggable" id="suffix—uj—drag">—uj—</div><div class="float_right droppable" id="suffix—uj—drop" style="width:300px;">container, receptacle, holder (also countries)</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—ul—drag">—ul—</div><div class="float_right droppable" id="suffix—ul—drop" style="width:300px;">denotes individual (person)</div>
-			<br style="clear:both;"/>	
-			<div class="float_left draggable" id="suffix—um—drag">—um—</div><div class="float_right droppable" id="suffix—um—drop" style="width:300px;">no definite meaning: sense is defined by usage or context</div>
-			<br style="clear:both;"/>
-			<div class="float_left draggable" id="suffix—cxj—drag">—c&#309;—</div><div class="float_right droppable" id="suffix—cxj—drop" style="width:300px;">affectionate endings (male)</div>
-			<br style="clear:both;"/>		
-			<div class="float_left draggable" id="suffix—nj—drag">—nj—</div><div class="float_right droppable" id="suffix—nj—drop" style="width:300px;">affectionate endings (female)</div>
-			<br style="clear:both;"/>		
+			<a href="#" title="" id="prefix-start-link" class="next_button">start</a>
 	    </section>	    	        
     </div>
     <script src="instruisto.js" type="text/javascript"></script>
     <script>
-    	goog.require('instruisto.client');
+    	require('instruisto.client');
     </script>
     <script>
     	instruisto.client.main();

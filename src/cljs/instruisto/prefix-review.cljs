@@ -22,6 +22,11 @@
     (goog-events/listen drag "dragover" drag-drop-action)
     (. drag (init))))
 
+(defn start-review []
+  (d/set-styles! (d/by-id "prefix_def_ordered")  {:display "none"})
+  (d/set-styles! (d/by-id "prefix-start-link")  {:display "none"})
+  (d/set-styles! (d/by-id "prefix_def_random")  {:display ""}))
+
 (defn start-prefix-review []
   (init-drag-drop "prefix-bo-drag" "prefix-bo-drop" "bo")
   (init-drag-drop "prefix-dis-drag" "prefix-dis-drop" "dis")
@@ -32,4 +37,14 @@
   (init-drag-drop "prefix-mal-drag" "prefix-mal-drop" "mal")
   (init-drag-drop "prefix-mis-drag" "prefix-mis-drop" "mis")
   (init-drag-drop "prefix-pra-drag" "prefix-pra-drop" "pra")
-  (init-drag-drop "prefix-re-drag" "prefix-re-drop" "re"))
+  (init-drag-drop "prefix-re-drag" "prefix-re-drop" "re")
+  
+  (events/unlisten! (d/by-id "prefix-start-link"))
+  (events/listen! (d/by-id "prefix-start-link")
+                  :click
+                  (fn [event]
+                     (events/stop-propagation event)
+                     (events/prevent-default event)
+                     (start-review)))
+  
+  )

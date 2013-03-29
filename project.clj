@@ -17,7 +17,8 @@
   
   :source-paths ["src/clj"]
   
-  :plugins [[lein-cljsbuild "0.2.9"]]
+  :plugins [[lein-cljsbuild "0.2.9"]
+            [lein-light "0.0.4"]]
   
   :cljsbuild {:builds [{:source-path "src/cljs"
                         :compiler {:output-to "resources/public/instruisto.js"

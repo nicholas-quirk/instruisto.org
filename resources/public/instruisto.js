@@ -29645,25 +29645,30 @@ instruisto.suffix_review.drop_drop_correct = function drop_drop_correct(source_i
   return domina.add_class_BANG_.call(null, domina.by_id.call(null, target_id), "highlight_correct")
 };
 instruisto.suffix_review.drag_drop_action = function drag_drop_action(event) {
-  var drag_data__6581 = event.dragSourceItem.data;
-  var drop_data__6582 = event.dropTargetItem.data;
-  var and__3822__auto____6583 = drag_data__6581 === drop_data__6582;
-  if(and__3822__auto____6583) {
-    var and__3822__auto____6584 = drop_data__6582 === instruisto.suffix_review.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
-    if(and__3822__auto____6584) {
+  var drag_data__124607 = event.dragSourceItem.data;
+  var drop_data__124608 = event.dropTargetItem.data;
+  var and__3822__auto____124609 = drag_data__124607 === drop_data__124608;
+  if(and__3822__auto____124609) {
+    var and__3822__auto____124610 = drop_data__124608 === instruisto.suffix_review.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
+    if(and__3822__auto____124610) {
       return instruisto.suffix_review.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id) === null
     }else {
-      return and__3822__auto____6584
+      return and__3822__auto____124610
     }
   }else {
-    return and__3822__auto____6583
+    return and__3822__auto____124609
   }
 };
 instruisto.suffix_review.init_drag_drop = function init_drag_drop(drag_id, drop_id, data) {
-  var drag__6586 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
-  drag__6586.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
-  goog.events.listen(drag__6586, "dragover", instruisto.suffix_review.drag_drop_action);
-  return drag__6586.init()
+  var drag__124612 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
+  drag__124612.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
+  goog.events.listen(drag__124612, "dragover", instruisto.suffix_review.drag_drop_action);
+  return drag__124612.init()
+};
+instruisto.suffix_review.start_review = function start_review() {
+  domina.set_styles_BANG_.call(null, domina.by_id.call(null, "suffix_def_ordered"), cljs.core.ObjMap.fromObject(["\ufdd0'display"], {"\ufdd0'display":"none"}));
+  domina.set_styles_BANG_.call(null, domina.by_id.call(null, "suffix-start-link"), cljs.core.ObjMap.fromObject(["\ufdd0'display"], {"\ufdd0'display":"none"}));
+  return domina.set_styles_BANG_.call(null, domina.by_id.call(null, "suffix_def_random"), cljs.core.ObjMap.fromObject(["\ufdd0'display"], {"\ufdd0'display":""}))
 };
 instruisto.suffix_review.start_suffix_review = function start_suffix_review() {
   instruisto.suffix_review.init_drag_drop.call(null, "suffix-acx-drag", "suffix-acx-drop", "acx");
@@ -29696,7 +29701,13 @@ instruisto.suffix_review.start_suffix_review = function start_suffix_review() {
   instruisto.suffix_review.init_drag_drop.call(null, "suffix-ul-drag", "suffix-ul-drop", "ul");
   instruisto.suffix_review.init_drag_drop.call(null, "suffix-um-drag", "suffix-um-drop", "um");
   instruisto.suffix_review.init_drag_drop.call(null, "suffix-cxj-drag", "suffix-cxj-drop", "cxj");
-  return instruisto.suffix_review.init_drag_drop.call(null, "suffix-nj-drag", "suffix-nj-drop", "nj")
+  instruisto.suffix_review.init_drag_drop.call(null, "suffix-nj-drag", "suffix-nj-drop", "nj");
+  domina.events.unlisten_BANG_.call(null, domina.by_id.call(null, "prefix-start-link"));
+  return domina.events.listen_BANG_.call(null, domina.by_id.call(null, "prefix-start-link"), "\ufdd0'click", function(event) {
+    domina.events.stop_propagation.call(null, event);
+    domina.events.prevent_default.call(null, event);
+    return instruisto.suffix_review.start_review.call(null)
+  })
 };
 goog.provide("instruisto.introduction");
 goog.require("cljs.core");
@@ -29741,25 +29752,30 @@ instruisto.prefix_review.drop_drop_correct = function drop_drop_correct(source_i
   return domina.add_class_BANG_.call(null, domina.by_id.call(null, target_id), "highlight_correct")
 };
 instruisto.prefix_review.drag_drop_action = function drag_drop_action(event) {
-  var drag_data__6563 = event.dragSourceItem.data;
-  var drop_data__6564 = event.dropTargetItem.data;
-  var and__3822__auto____6565 = drag_data__6563 === drop_data__6564;
-  if(and__3822__auto____6565) {
-    var and__3822__auto____6566 = drop_data__6564 === instruisto.prefix_review.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
-    if(and__3822__auto____6566) {
+  var drag_data__120679 = event.dragSourceItem.data;
+  var drop_data__120680 = event.dropTargetItem.data;
+  var and__3822__auto____120681 = drag_data__120679 === drop_data__120680;
+  if(and__3822__auto____120681) {
+    var and__3822__auto____120682 = drop_data__120680 === instruisto.prefix_review.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
+    if(and__3822__auto____120682) {
       return instruisto.prefix_review.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id) === null
     }else {
-      return and__3822__auto____6566
+      return and__3822__auto____120682
     }
   }else {
-    return and__3822__auto____6565
+    return and__3822__auto____120681
   }
 };
 instruisto.prefix_review.init_drag_drop = function init_drag_drop(drag_id, drop_id, data) {
-  var drag__6568 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
-  drag__6568.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
-  goog.events.listen(drag__6568, "dragover", instruisto.prefix_review.drag_drop_action);
-  return drag__6568.init()
+  var drag__120684 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
+  drag__120684.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
+  goog.events.listen(drag__120684, "dragover", instruisto.prefix_review.drag_drop_action);
+  return drag__120684.init()
+};
+instruisto.prefix_review.start_review = function start_review() {
+  domina.set_styles_BANG_.call(null, domina.by_id.call(null, "prefix_def_ordered"), cljs.core.ObjMap.fromObject(["\ufdd0'display"], {"\ufdd0'display":"none"}));
+  domina.set_styles_BANG_.call(null, domina.by_id.call(null, "prefix-start-link"), cljs.core.ObjMap.fromObject(["\ufdd0'display"], {"\ufdd0'display":"none"}));
+  return domina.set_styles_BANG_.call(null, domina.by_id.call(null, "prefix_def_random"), cljs.core.ObjMap.fromObject(["\ufdd0'display"], {"\ufdd0'display":""}))
 };
 instruisto.prefix_review.start_prefix_review = function start_prefix_review() {
   instruisto.prefix_review.init_drag_drop.call(null, "prefix-bo-drag", "prefix-bo-drop", "bo");
@@ -29771,7 +29787,13 @@ instruisto.prefix_review.start_prefix_review = function start_prefix_review() {
   instruisto.prefix_review.init_drag_drop.call(null, "prefix-mal-drag", "prefix-mal-drop", "mal");
   instruisto.prefix_review.init_drag_drop.call(null, "prefix-mis-drag", "prefix-mis-drop", "mis");
   instruisto.prefix_review.init_drag_drop.call(null, "prefix-pra-drag", "prefix-pra-drop", "pra");
-  return instruisto.prefix_review.init_drag_drop.call(null, "prefix-re-drag", "prefix-re-drop", "re")
+  instruisto.prefix_review.init_drag_drop.call(null, "prefix-re-drag", "prefix-re-drop", "re");
+  domina.events.unlisten_BANG_.call(null, domina.by_id.call(null, "prefix-start-link"));
+  return domina.events.listen_BANG_.call(null, domina.by_id.call(null, "prefix-start-link"), "\ufdd0'click", function(event) {
+    domina.events.stop_propagation.call(null, event);
+    domina.events.prevent_default.call(null, event);
+    return instruisto.prefix_review.start_review.call(null)
+  })
 };
 goog.provide("instruisto.alphabet");
 goog.require("cljs.core");

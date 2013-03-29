@@ -13,25 +13,30 @@ domina.add_class_BANG_.call(null,domina.by_id.call(null,source_id),"highlight_co
 return domina.add_class_BANG_.call(null,domina.by_id.call(null,target_id),"highlight_correct");
 });
 instruisto.suffix_review.drag_drop_action = (function drag_drop_action(event){
-var drag_data__6581 = event.dragSourceItem.data;
-var drop_data__6582 = event.dropTargetItem.data;
-var and__3822__auto____6583 = (drag_data__6581 === drop_data__6582);
-if(and__3822__auto____6583)
-{var and__3822__auto____6584 = (drop_data__6582 === instruisto.suffix_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
-if(and__3822__auto____6584)
+var drag_data__124607 = event.dragSourceItem.data;
+var drop_data__124608 = event.dropTargetItem.data;
+var and__3822__auto____124609 = (drag_data__124607 === drop_data__124608);
+if(and__3822__auto____124609)
+{var and__3822__auto____124610 = (drop_data__124608 === instruisto.suffix_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
+if(and__3822__auto____124610)
 {return (instruisto.suffix_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id) === null);
 } else
-{return and__3822__auto____6584;
+{return and__3822__auto____124610;
 }
 } else
-{return and__3822__auto____6583;
+{return and__3822__auto____124609;
 }
 });
 instruisto.suffix_review.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__6586 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__6586.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__6586,"dragover",instruisto.suffix_review.drag_drop_action);
-return drag__6586.init();
+var drag__124612 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__124612.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__124612,"dragover",instruisto.suffix_review.drag_drop_action);
+return drag__124612.init();
+});
+instruisto.suffix_review.start_review = (function start_review(){
+domina.set_styles_BANG_.call(null,domina.by_id.call(null,"suffix_def_ordered"),cljs.core.ObjMap.fromObject(["\uFDD0'display"],{"\uFDD0'display":"none"}));
+domina.set_styles_BANG_.call(null,domina.by_id.call(null,"suffix-start-link"),cljs.core.ObjMap.fromObject(["\uFDD0'display"],{"\uFDD0'display":"none"}));
+return domina.set_styles_BANG_.call(null,domina.by_id.call(null,"suffix_def_random"),cljs.core.ObjMap.fromObject(["\uFDD0'display"],{"\uFDD0'display":""}));
 });
 instruisto.suffix_review.start_suffix_review = (function start_suffix_review(){
 instruisto.suffix_review.init_drag_drop.call(null,"suffix-acx-drag","suffix-acx-drop","acx");
@@ -64,5 +69,11 @@ instruisto.suffix_review.init_drag_drop.call(null,"suffix-uj-drag","suffix-uj-dr
 instruisto.suffix_review.init_drag_drop.call(null,"suffix-ul-drag","suffix-ul-drop","ul");
 instruisto.suffix_review.init_drag_drop.call(null,"suffix-um-drag","suffix-um-drop","um");
 instruisto.suffix_review.init_drag_drop.call(null,"suffix-cxj-drag","suffix-cxj-drop","cxj");
-return instruisto.suffix_review.init_drag_drop.call(null,"suffix-nj-drag","suffix-nj-drop","nj");
+instruisto.suffix_review.init_drag_drop.call(null,"suffix-nj-drag","suffix-nj-drop","nj");
+domina.events.unlisten_BANG_.call(null,domina.by_id.call(null,"prefix-start-link"));
+return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"prefix-start-link"),"\uFDD0'click",(function (event){
+domina.events.stop_propagation.call(null,event);
+domina.events.prevent_default.call(null,event);
+return instruisto.suffix_review.start_review.call(null);
+}));
 });
