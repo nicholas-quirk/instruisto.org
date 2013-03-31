@@ -23,9 +23,9 @@
     (. drag (init))))
 
 (defn start-review []
-  (d/set-styles! (d/by-id "suffix_def_ordered")  {:display "none"})
-  (d/set-styles! (d/by-id "suffix-start-link")  {:display "none"})
-  (d/set-styles! (d/by-id "suffix_def_random")  {:display ""}))
+  (d/set-styles! (d/by-id "suffix_def_ordered") {:display "none"})
+  (d/set-styles! (d/by-id "suffix-start-link") {:display "none"})
+  (d/set-styles! (d/by-id "suffix_def_random") {:display ""}))
 
 (defn start-suffix-review []
   (init-drag-drop "suffix-acx-drag" "suffix-acx-drop" "acx")
@@ -59,12 +59,11 @@
   (init-drag-drop "suffix-um-drag" "suffix-um-drop" "um") 
   (init-drag-drop "suffix-cxj-drag" "suffix-cxj-drop" "cxj")
   (init-drag-drop "suffix-nj-drag" "suffix-nj-drop" "nj")
-    
   (events/unlisten! (d/by-id "prefix-start-link"))
   (events/listen! (d/by-id "prefix-start-link")
                   :click
                   (fn [event]
-                     (events/stop-propagation event)
-                     (events/prevent-default event)
-                     (start-review)))
+                    (events/stop-propagation event)
+                    (events/prevent-default event)
+                    (start-review)))
   )

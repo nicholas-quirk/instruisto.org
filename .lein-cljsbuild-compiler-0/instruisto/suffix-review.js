@@ -13,25 +13,25 @@ domina.add_class_BANG_.call(null,domina.by_id.call(null,source_id),"highlight_co
 return domina.add_class_BANG_.call(null,domina.by_id.call(null,target_id),"highlight_correct");
 });
 instruisto.suffix_review.drag_drop_action = (function drag_drop_action(event){
-var drag_data__124607 = event.dragSourceItem.data;
-var drop_data__124608 = event.dropTargetItem.data;
-var and__3822__auto____124609 = (drag_data__124607 === drop_data__124608);
-if(and__3822__auto____124609)
-{var and__3822__auto____124610 = (drop_data__124608 === instruisto.suffix_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
-if(and__3822__auto____124610)
+var drag_data__148081 = event.dragSourceItem.data;
+var drop_data__148082 = event.dropTargetItem.data;
+var and__3822__auto____148083 = (drag_data__148081 === drop_data__148082);
+if(and__3822__auto____148083)
+{var and__3822__auto____148084 = (drop_data__148082 === instruisto.suffix_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
+if(and__3822__auto____148084)
 {return (instruisto.suffix_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id) === null);
 } else
-{return and__3822__auto____124610;
+{return and__3822__auto____148084;
 }
 } else
-{return and__3822__auto____124609;
+{return and__3822__auto____148083;
 }
 });
 instruisto.suffix_review.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__124612 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__124612.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__124612,"dragover",instruisto.suffix_review.drag_drop_action);
-return drag__124612.init();
+var drag__148086 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__148086.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__148086,"dragover",instruisto.suffix_review.drag_drop_action);
+return drag__148086.init();
 });
 instruisto.suffix_review.start_review = (function start_review(){
 domina.set_styles_BANG_.call(null,domina.by_id.call(null,"suffix_def_ordered"),cljs.core.ObjMap.fromObject(["\uFDD0'display"],{"\uFDD0'display":"none"}));

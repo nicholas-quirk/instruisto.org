@@ -9,7 +9,9 @@ goog.require('instruisto.prefix_review');
 goog.require('instruisto.plural_review');
 goog.require('instruisto.prefix');
 goog.require('instruisto.basic_grammar');
+goog.require('instruisto.for_programmer');
 goog.require('domina');
+goog.require('instruisto.for_language_learner');
 goog.require('instruisto.suffix_review');
 goog.require('instruisto.effects');
 goog.require('goog.net.XhrIo');
@@ -29,13 +31,15 @@ instruisto.client.display_sub_cat = (function display_sub_cat(elem_id){
 instruisto.client.hide_sub_cats.call(null);
 return domina.set_styles_BANG_.call(null,domina.by_class.call(null,elem_id),cljs.core.ObjMap.fromObject(["\uFDD0'display"],{"\uFDD0'display":""}));
 });
-instruisto.client.display_section_on_click = (function display_section_on_click(button_elem,section,start_func){
-return domina.events.listen_BANG_.call(null,button_elem,"\uFDD0'click",(function (event){
-instruisto.client.click_defaults.call(null,event,section);
-return start_func.call(null);
-}));
-});
 instruisto.client.main = (function main(){
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-for-language-learner"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"for-langauge-learner-section"));
+return instruisto.for_language_learner.start_for_language_learner.call(null);
+}));
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-for-programmer"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"for-programmer-section"));
+return instruisto.for_programmer.start_for_programmer.call(null);
+}));
 domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-introduction"),"\uFDD0'click",(function (event){
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"introduction-section"));
 return instruisto.introduction.start_introduction.call(null);

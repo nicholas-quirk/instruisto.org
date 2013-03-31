@@ -33,6 +33,6 @@
   (events/listen! (d/by-id "introduction-link")
                   :click
                   (fn [event]
-                     (events/stop-propagation event)
-                     (events/prevent-default event)
-                     (load-next-section nil))))
+                    (events/stop-propagation event)
+                    (events/prevent-default event)
+                    (load-next-section nil))))

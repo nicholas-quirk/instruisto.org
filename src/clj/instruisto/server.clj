@@ -1,20 +1,35 @@
 (ns instruisto.server
-  (:require [compojure.route :as route]
-            [compojure.core :as compojure]
-            [ring.util.response :as response]
-            [ring.adapter.jetty :as jetty]))
+  (:use compojure.core
+        ring.util.response
+        ring.adapter.jetty
+        instruisto.routes
+        ring.middleware.params)
+  (:require [compojure.handler :as handler]
+            [compojure.response :as response]))
 
-(defn echo [request]
-  (let [name (read-string (slurp (:body request)))]
-    (pr-str name)))
-
-(compojure/defroutes app
-  (route/resources "/"))
+(def app (-> main-routes wrap-params))
 
 (defn -main [port]
-;  (models/initialize)
   ;(let [port (Integer/parseInt (get (System/getenv) "PORT" "8080"))]
-  (jetty/run-jetty app {:join? true :port (Integer. port)}));)
+  (run-jetty app {:port (Integer. port)}));)
 
-;(defn -main []
-;  (jetty/run-jetty app {:join? true :port 5000}))
+
+;(ns instruisto.server
+;  (:use compojure.core)
+;  (:require [compojure.route :as route]
+;            [compojure.handler :as handler]
+;            [ring.util.response :as response]
+;            [ring.adapter.jetty :as jetty]))
+;
+;(defn echo [request]
+;  (let [name (read-string (slurp (:body request)))]
+;    (pr-str name)))
+;
+;(defroutes app
+;  (GET "/" [] (ring.util.response/file-response "index.html" {:root "public"}))
+;  (route/resources "/" {:root "resources/public"}))
+;
+;(def application-routes app)
+;
+;(defn -main [port]
+;  (jetty/run-jetty application-routes {:join? true :port (Integer. port)}))

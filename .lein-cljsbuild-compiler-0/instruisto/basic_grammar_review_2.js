@@ -13,21 +13,21 @@ domina.add_class_BANG_.call(null,domina.by_id.call(null,source_id),"highlight_co
 return domina.add_class_BANG_.call(null,domina.by_id.call(null,target_id),"highlight_correct");
 });
 instruisto.basic_grammar_review_2.drag_drop_action = (function drag_drop_action(event){
-var drag_data__6482 = event.dragSourceItem.data;
-var drop_data__6483 = event.dropTargetItem.data;
-var and__3822__auto____6484 = (drag_data__6482 === drop_data__6483);
-if(and__3822__auto____6484)
-{(drop_data__6483 === domina.set_text_BANG_.call(null,domina.by_id.call(null,"bgr-trans"),drag_data__6482));
+var drag_data__124464 = event.dragSourceItem.data;
+var drop_data__124465 = event.dropTargetItem.data;
+var and__3822__auto____124466 = (drag_data__124464 === drop_data__124465);
+if(and__3822__auto____124466)
+{(drop_data__124465 === domina.set_text_BANG_.call(null,domina.by_id.call(null,"bgr-trans"),drag_data__124464));
 } else
-{and__3822__auto____6484;
+{and__3822__auto____124466;
 }
 return null;
 });
 instruisto.basic_grammar_review_2.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__6486 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__6486.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__6486,"dragover",instruisto.basic_grammar_review_2.drag_drop_action);
-return drag__6486.init();
+var drag__124468 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__124468.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__124468,"dragover",instruisto.basic_grammar_review_2.drag_drop_action);
+return drag__124468.init();
 });
 instruisto.basic_grammar_review_2.start_basic_grammar_review = (function start_basic_grammar_review(){
 instruisto.basic_grammar_review_2.init_drag_drop.call(null,"bgr-noun-end-drag","bgr-skrib-drop","writing");

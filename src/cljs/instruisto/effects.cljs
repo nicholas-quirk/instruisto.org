@@ -5,7 +5,6 @@
             [domina :as d]
             [domina.events :as events]))
 
-
 (defn fade-out-elem [elem ms]
   (. (fx-dom/FadeOut. elem ms nil) (play)))
 

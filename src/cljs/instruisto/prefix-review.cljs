@@ -23,9 +23,9 @@
     (. drag (init))))
 
 (defn start-review []
-  (d/set-styles! (d/by-id "prefix_def_ordered")  {:display "none"})
-  (d/set-styles! (d/by-id "prefix-start-link")  {:display "none"})
-  (d/set-styles! (d/by-id "prefix_def_random")  {:display ""}))
+  (d/set-styles! (d/by-id "prefix_def_ordered") {:display "none"})
+  (d/set-styles! (d/by-id "prefix-start-link") {:display "none"})
+  (d/set-styles! (d/by-id "prefix_def_random") {:display ""}))
 
 (defn start-prefix-review []
   (init-drag-drop "prefix-bo-drag" "prefix-bo-drop" "bo")
@@ -38,7 +38,6 @@
   (init-drag-drop "prefix-mis-drag" "prefix-mis-drop" "mis")
   (init-drag-drop "prefix-pra-drag" "prefix-pra-drop" "pra")
   (init-drag-drop "prefix-re-drag" "prefix-re-drop" "re")
-  
   (events/unlisten! (d/by-id "prefix-start-link"))
   (events/listen! (d/by-id "prefix-start-link")
                   :click

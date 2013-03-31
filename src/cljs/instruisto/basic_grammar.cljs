@@ -51,6 +51,6 @@
   (events/listen! (d/by-id "basic-grammar-link")
                   :click
                   (fn [event]
-                     (events/stop-propagation event)
-                     (events/prevent-default event)
-                     (load-next-grammar-section nil))))
+                    (events/stop-propagation event)
+                    (events/prevent-default event)
+                    (load-next-grammar-section nil))))

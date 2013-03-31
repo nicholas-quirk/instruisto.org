@@ -13,25 +13,25 @@ domina.add_class_BANG_.call(null,domina.by_id.call(null,source_id),"highlight_co
 return domina.add_class_BANG_.call(null,domina.by_id.call(null,target_id),"highlight_correct");
 });
 instruisto.prefix_review.drag_drop_action = (function drag_drop_action(event){
-var drag_data__120679 = event.dragSourceItem.data;
-var drop_data__120680 = event.dropTargetItem.data;
-var and__3822__auto____120681 = (drag_data__120679 === drop_data__120680);
-if(and__3822__auto____120681)
-{var and__3822__auto____120682 = (drop_data__120680 === instruisto.prefix_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
-if(and__3822__auto____120682)
+var drag_data__171641 = event.dragSourceItem.data;
+var drop_data__171642 = event.dropTargetItem.data;
+var and__3822__auto____171643 = (drag_data__171641 === drop_data__171642);
+if(and__3822__auto____171643)
+{var and__3822__auto____171644 = (drop_data__171642 === instruisto.prefix_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
+if(and__3822__auto____171644)
 {return (instruisto.prefix_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id) === null);
 } else
-{return and__3822__auto____120682;
+{return and__3822__auto____171644;
 }
 } else
-{return and__3822__auto____120681;
+{return and__3822__auto____171643;
 }
 });
 instruisto.prefix_review.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__120684 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__120684.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__120684,"dragover",instruisto.prefix_review.drag_drop_action);
-return drag__120684.init();
+var drag__171646 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__171646.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__171646,"dragover",instruisto.prefix_review.drag_drop_action);
+return drag__171646.init();
 });
 instruisto.prefix_review.start_review = (function start_review(){
 domina.set_styles_BANG_.call(null,domina.by_id.call(null,"prefix_def_ordered"),cljs.core.ObjMap.fromObject(["\uFDD0'display"],{"\uFDD0'display":"none"}));

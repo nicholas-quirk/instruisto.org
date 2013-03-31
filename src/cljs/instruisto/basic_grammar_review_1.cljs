@@ -22,7 +22,6 @@
     (goog-events/listen drag "dragover" drag-drop-action)
     (. drag (init))))
 
-
 (defn start-basic-grammar-review []
   (init-drag-drop "bgr-noun-drag" "bgr-noun-drop" "noun")
   (init-drag-drop "bgr-adj-drag" "bgr-adj-drop" "adj")
