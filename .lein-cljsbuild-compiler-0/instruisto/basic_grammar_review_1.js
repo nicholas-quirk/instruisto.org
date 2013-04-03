@@ -8,30 +8,26 @@ goog.require('goog.fx.dom');
 goog.require('goog.fx');
 goog.require('goog.fx.DragDrop');
 goog.require('goog.net.XhrIo');
-instruisto.basic_grammar_review_1.drop_drop_correct = (function drop_drop_correct(source_id,target_id){
-domina.add_class_BANG_.call(null,domina.by_id.call(null,source_id),"highlight_correct");
-return domina.add_class_BANG_.call(null,domina.by_id.call(null,target_id),"highlight_correct");
-});
 instruisto.basic_grammar_review_1.drag_drop_action = (function drag_drop_action(event){
-var drag_data__89887 = event.dragSourceItem.data;
-var drop_data__89888 = event.dropTargetItem.data;
-var and__3822__auto____89889 = (drag_data__89887 === drop_data__89888);
-if(and__3822__auto____89889)
-{var and__3822__auto____89890 = (drop_data__89888 === instruisto.basic_grammar_review_1.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
-if(and__3822__auto____89890)
-{return (instruisto.basic_grammar_review_1.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id) === null);
+var drag_data__6473 = event.dragSourceItem.data;
+var drop_data__6474 = event.dropTargetItem.data;
+var and__3822__auto____6475 = (drag_data__6473 === drop_data__6474);
+if(and__3822__auto____6475)
+{var and__3822__auto____6476 = (drop_data__6474 === instruisto.effects.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
+if(and__3822__auto____6476)
+{return (instruisto.effects.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id) === null);
 } else
-{return and__3822__auto____89890;
+{return and__3822__auto____6476;
 }
 } else
-{return and__3822__auto____89889;
+{return and__3822__auto____6475;
 }
 });
 instruisto.basic_grammar_review_1.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__89892 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__89892.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__89892,"dragover",instruisto.basic_grammar_review_1.drag_drop_action);
-return drag__89892.init();
+var drag__6478 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__6478.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__6478,"dragover",instruisto.basic_grammar_review_1.drag_drop_action);
+return drag__6478.init();
 });
 instruisto.basic_grammar_review_1.start_basic_grammar_review = (function start_basic_grammar_review(){
 instruisto.basic_grammar_review_1.init_drag_drop.call(null,"bgr-noun-drag","bgr-noun-drop","noun");

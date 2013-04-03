@@ -15,6 +15,8 @@
             [instruisto.suffix-review :as suffix-review]
             [instruisto.for-language-learner :as for-language-learner]
             [instruisto.for-programmer :as for-programmer]
+            [instruisto.contact :as contact]
+            [instruisto.pronoun :as pronoun]
             [instruisto.effects :as effects]))
 
 (defn click-defaults [event elem]
@@ -42,6 +44,11 @@
                  (fn [event]
                    (click-defaults event (d/by-id "for-programmer-section"))
                    (for-programmer/start-for-programmer)))
+ 	(events/listen! (d/by-id "link-contact")
+                 :click
+                 (fn [event]
+                   (click-defaults event (d/by-id "contact-section"))
+                   (contact/start-contact)))
 	(events/listen! (d/by-id "link-introduction")
 	                :click
 	                (fn [event]
@@ -100,4 +107,9 @@
                  :click
                  (fn [event]
                    (click-defaults event (d/by-id "suffix-review-section"))
-                   (suffix-review/start-suffix-review))))
+                   (suffix-review/start-suffix-review)))
+ (events/listen! (d/by-id "link-pronoun")
+                 :click
+                 (fn [event]
+                   (click-defaults event (d/by-id "pronoun-section"))
+                   (pronoun/start-pronoun))))

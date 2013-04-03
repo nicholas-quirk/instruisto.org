@@ -10,3 +10,7 @@
 
 (defn fade-in-elem [elem ms]
   (. (fx-dom/FadeIn. elem ms nil) (play)))
+
+(defn drop-drop-correct [source-id target-id]
+  (d/add-class! (d/by-id source-id) "highlight_correct")
+  (d/add-class! (d/by-id target-id) "highlight_correct"))

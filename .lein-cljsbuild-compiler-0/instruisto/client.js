@@ -1,12 +1,14 @@
 goog.provide('instruisto.client');
 goog.require('cljs.core');
 goog.require('instruisto.basic_grammar_review_1');
+goog.require('instruisto.contact');
 goog.require('instruisto.basic_grammar_review_2');
 goog.require('instruisto.introduction');
 goog.require('domina.events');
 goog.require('instruisto.alphabet');
 goog.require('instruisto.prefix_review');
 goog.require('instruisto.plural_review');
+goog.require('instruisto.pronoun');
 goog.require('instruisto.prefix');
 goog.require('instruisto.basic_grammar');
 goog.require('instruisto.for_programmer');
@@ -39,6 +41,10 @@ return instruisto.for_language_learner.start_for_language_learner.call(null);
 domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-for-programmer"),"\uFDD0'click",(function (event){
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"for-programmer-section"));
 return instruisto.for_programmer.start_for_programmer.call(null);
+}));
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-contact"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"contact-section"));
+return instruisto.contact.start_contact.call(null);
 }));
 domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-introduction"),"\uFDD0'click",(function (event){
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"introduction-section"));
@@ -83,9 +89,13 @@ domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-suffix"),"\uFD
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"suffix-section"));
 return instruisto.suffix.start_suffix.call(null);
 }));
-return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-suffix-review"),"\uFDD0'click",(function (event){
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-suffix-review"),"\uFDD0'click",(function (event){
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"suffix-review-section"));
 return instruisto.suffix_review.start_suffix_review.call(null);
+}));
+return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-pronoun"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"pronoun-section"));
+return instruisto.pronoun.start_pronoun.call(null);
 }));
 });
 goog.exportSymbol('instruisto.client.main', instruisto.client.main);

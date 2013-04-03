@@ -8,10 +8,6 @@
             [domina.events :as events]
             [instruisto.effects :as effects]))
 
-(defn drop-drop-correct [source-id target-id]
-  (d/add-class! (d/by-id source-id) "highlight_correct")
-  (d/add-class! (d/by-id target-id) "highlight_correct"))
-
 (defn drag-drop-action [event]
   (let [drag-data (.-data (.-dragSourceItem event)) drop-data (.-data (.-dropTargetItem event))]
     (== drag-data drop-data (d/set-text! (d/by-id "bgr-trans") drag-data)) nil))

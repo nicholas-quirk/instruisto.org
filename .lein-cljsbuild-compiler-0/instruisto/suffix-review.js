@@ -8,30 +8,32 @@ goog.require('goog.fx.dom');
 goog.require('goog.fx');
 goog.require('goog.fx.DragDrop');
 goog.require('goog.net.XhrIo');
-instruisto.suffix_review.drop_drop_correct = (function drop_drop_correct(source_id,target_id){
-domina.add_class_BANG_.call(null,domina.by_id.call(null,source_id),"highlight_correct");
-return domina.add_class_BANG_.call(null,domina.by_id.call(null,target_id),"highlight_correct");
+instruisto.suffix_review.highlight_remove_display = (function highlight_remove_display(event){
+instruisto.effects.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id);
+domina.set_text_BANG_.call(null,domina.by_id.call(null,"suffix-review-title"),[cljs.core.str(domina.text.call(null,event.dragSourceItem.element)),cljs.core.str(" "),cljs.core.str(domina.text.call(null,event.dropTargetItem.element))].join(''));
+domina.destroy_BANG_.call(null,event.dropTargetItem.element);
+return domina.destroy_BANG_.call(null,event.dragSourceItem.element);
 });
 instruisto.suffix_review.drag_drop_action = (function drag_drop_action(event){
-var drag_data__148081 = event.dragSourceItem.data;
-var drop_data__148082 = event.dropTargetItem.data;
-var and__3822__auto____148083 = (drag_data__148081 === drop_data__148082);
-if(and__3822__auto____148083)
-{var and__3822__auto____148084 = (drop_data__148082 === instruisto.suffix_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
-if(and__3822__auto____148084)
-{return (instruisto.suffix_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id) === null);
+var drag_data__179503 = event.dragSourceItem.data;
+var drop_data__179504 = event.dropTargetItem.data;
+var and__3822__auto____179505 = (drag_data__179503 === drop_data__179504);
+if(and__3822__auto____179505)
+{var and__3822__auto____179506 = (drop_data__179504 === instruisto.suffix_review.highlight_remove_display.call(null,event));
+if(and__3822__auto____179506)
+{return (instruisto.suffix_review.highlight_remove_display.call(null,event) === null);
 } else
-{return and__3822__auto____148084;
+{return and__3822__auto____179506;
 }
 } else
-{return and__3822__auto____148083;
+{return and__3822__auto____179505;
 }
 });
 instruisto.suffix_review.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__148086 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__148086.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__148086,"dragover",instruisto.suffix_review.drag_drop_action);
-return drag__148086.init();
+var drag__179508 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__179508.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__179508,"dragover",instruisto.suffix_review.drag_drop_action);
+return drag__179508.init();
 });
 instruisto.suffix_review.start_review = (function start_review(){
 domina.set_styles_BANG_.call(null,domina.by_id.call(null,"suffix_def_ordered"),cljs.core.ObjMap.fromObject(["\uFDD0'display"],{"\uFDD0'display":"none"}));
@@ -70,8 +72,8 @@ instruisto.suffix_review.init_drag_drop.call(null,"suffix-ul-drag","suffix-ul-dr
 instruisto.suffix_review.init_drag_drop.call(null,"suffix-um-drag","suffix-um-drop","um");
 instruisto.suffix_review.init_drag_drop.call(null,"suffix-cxj-drag","suffix-cxj-drop","cxj");
 instruisto.suffix_review.init_drag_drop.call(null,"suffix-nj-drag","suffix-nj-drop","nj");
-domina.events.unlisten_BANG_.call(null,domina.by_id.call(null,"prefix-start-link"));
-return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"prefix-start-link"),"\uFDD0'click",(function (event){
+domina.events.unlisten_BANG_.call(null,domina.by_id.call(null,"suffix-start-link"));
+return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"suffix-start-link"),"\uFDD0'click",(function (event){
 domina.events.stop_propagation.call(null,event);
 domina.events.prevent_default.call(null,event);
 return instruisto.suffix_review.start_review.call(null);

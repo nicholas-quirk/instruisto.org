@@ -28546,6 +28546,10 @@ instruisto.effects.fade_out_elem = function fade_out_elem(elem, ms) {
 instruisto.effects.fade_in_elem = function fade_in_elem(elem, ms) {
   return(new goog.fx.dom.FadeIn(elem, ms, null)).play()
 };
+instruisto.effects.drop_drop_correct = function drop_drop_correct(source_id, target_id) {
+  domina.add_class_BANG_.call(null, domina.by_id.call(null, source_id), "highlight_correct");
+  return domina.add_class_BANG_.call(null, domina.by_id.call(null, target_id), "highlight_correct")
+};
 goog.provide("instruisto.suffix");
 goog.require("cljs.core");
 goog.require("instruisto.effects");
@@ -28554,13 +28558,13 @@ goog.require("domina");
 goog.require("goog.net.XhrIo");
 instruisto.suffix.suffix_map = cljs.core.ObjMap.fromObject(["\ufdd0'suffix"], {"\ufdd0'suffix":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Suffix System", "\ufdd0'body":"The suffix system is the same as the prefix system, in that it transforms root words to other forms of the same word. There are roughly 4 times as many suffixes as prefixes. Just like the prefixes, the suffixes require mastery in order to fully understand Esperanto.", "\ufdd0'next":""})});
 instruisto.suffix.load_next_section = function load_next_section(m) {
-  var entry_map__151999 = m == null ? cljs.core._lookup.call(null, instruisto.suffix.suffix_map, cljs.core.keyword.call(null, domina.attr.call(null, domina.by_id.call(null, "suffix-link"), "title")), null) : m;
-  var elem_title__152000 = domina.by_id.call(null, "suffix-title");
-  var elem_body__152001 = domina.by_id.call(null, "suffix-body");
-  var elem_link__152002 = domina.by_id.call(null, "suffix-link");
-  domina.set_text_BANG_.call(null, elem_title__152000, (new cljs.core.Keyword("\ufdd0'title")).call(null, entry_map__151999));
-  domina.set_text_BANG_.call(null, elem_body__152001, (new cljs.core.Keyword("\ufdd0'body")).call(null, entry_map__151999));
-  return domina.set_attr_BANG_.call(null, elem_link__152002, "title", (new cljs.core.Keyword("\ufdd0'next")).call(null, entry_map__151999))
+  var entry_map__6591 = m == null ? cljs.core._lookup.call(null, instruisto.suffix.suffix_map, cljs.core.keyword.call(null, domina.attr.call(null, domina.by_id.call(null, "suffix-link"), "title")), null) : m;
+  var elem_title__6592 = domina.by_id.call(null, "suffix-title");
+  var elem_body__6593 = domina.by_id.call(null, "suffix-body");
+  var elem_link__6594 = domina.by_id.call(null, "suffix-link");
+  domina.set_text_BANG_.call(null, elem_title__6592, (new cljs.core.Keyword("\ufdd0'title")).call(null, entry_map__6591));
+  domina.set_text_BANG_.call(null, elem_body__6593, (new cljs.core.Keyword("\ufdd0'body")).call(null, entry_map__6591));
+  return domina.set_attr_BANG_.call(null, elem_link__6594, "title", (new cljs.core.Keyword("\ufdd0'next")).call(null, entry_map__6591))
 };
 instruisto.suffix.start_suffix = function start_suffix() {
   instruisto.suffix.load_next_section.call(null, (new cljs.core.Keyword("\ufdd0'suffix")).call(null, instruisto.suffix.suffix_map));
@@ -28570,6 +28574,15 @@ instruisto.suffix.start_suffix = function start_suffix() {
     domina.events.prevent_default.call(null, event);
     return instruisto.suffix.load_next_section.call(null, null)
   })
+};
+goog.provide("instruisto.contact");
+goog.require("cljs.core");
+goog.require("instruisto.effects");
+goog.require("domina.events");
+goog.require("domina");
+goog.require("goog.net.XhrIo");
+instruisto.contact.start_contact = function start_contact() {
+  return null
 };
 goog.provide("instruisto.for_language_learner");
 goog.require("cljs.core");
@@ -29452,30 +29465,26 @@ goog.require("goog.fx.dom");
 goog.require("goog.fx");
 goog.require("goog.fx.DragDrop");
 goog.require("goog.net.XhrIo");
-instruisto.basic_grammar_review_1.drop_drop_correct = function drop_drop_correct(source_id, target_id) {
-  domina.add_class_BANG_.call(null, domina.by_id.call(null, source_id), "highlight_correct");
-  return domina.add_class_BANG_.call(null, domina.by_id.call(null, target_id), "highlight_correct")
-};
 instruisto.basic_grammar_review_1.drag_drop_action = function drag_drop_action(event) {
-  var drag_data__89887 = event.dragSourceItem.data;
-  var drop_data__89888 = event.dropTargetItem.data;
-  var and__3822__auto____89889 = drag_data__89887 === drop_data__89888;
-  if(and__3822__auto____89889) {
-    var and__3822__auto____89890 = drop_data__89888 === instruisto.basic_grammar_review_1.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
-    if(and__3822__auto____89890) {
-      return instruisto.basic_grammar_review_1.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id) === null
+  var drag_data__6473 = event.dragSourceItem.data;
+  var drop_data__6474 = event.dropTargetItem.data;
+  var and__3822__auto____6475 = drag_data__6473 === drop_data__6474;
+  if(and__3822__auto____6475) {
+    var and__3822__auto____6476 = drop_data__6474 === instruisto.effects.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
+    if(and__3822__auto____6476) {
+      return instruisto.effects.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id) === null
     }else {
-      return and__3822__auto____89890
+      return and__3822__auto____6476
     }
   }else {
-    return and__3822__auto____89889
+    return and__3822__auto____6475
   }
 };
 instruisto.basic_grammar_review_1.init_drag_drop = function init_drag_drop(drag_id, drop_id, data) {
-  var drag__89892 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
-  drag__89892.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
-  goog.events.listen(drag__89892, "dragover", instruisto.basic_grammar_review_1.drag_drop_action);
-  return drag__89892.init()
+  var drag__6478 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
+  drag__6478.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
+  goog.events.listen(drag__6478, "dragover", instruisto.basic_grammar_review_1.drag_drop_action);
+  return drag__6478.init()
 };
 instruisto.basic_grammar_review_1.start_basic_grammar_review = function start_basic_grammar_review() {
   instruisto.basic_grammar_review_1.init_drag_drop.call(null, "bgr-noun-drag", "bgr-noun-drop", "noun");
@@ -29499,10 +29508,6 @@ goog.require("goog.fx.dom");
 goog.require("goog.fx");
 goog.require("goog.fx.DragDrop");
 goog.require("goog.net.XhrIo");
-instruisto.plural_review.drop_drop_correct = function drop_drop_correct(source_id, target_id) {
-  domina.add_class_BANG_.call(null, domina.by_id.call(null, source_id), "highlight_correct");
-  return domina.add_class_BANG_.call(null, domina.by_id.call(null, target_id), "highlight_correct")
-};
 instruisto.plural_review.drag_drop_action = function drag_drop_action(event) {
   var drag_data__6552 = event.dragSourceItem.data;
   var drop_data__6553 = event.dropTargetItem.data;
@@ -29514,9 +29519,9 @@ instruisto.plural_review.drag_drop_action = function drag_drop_action(event) {
   }
   var and__3822__auto____6555 = drag_data__6552 === drop_data__6553;
   if(and__3822__auto____6555) {
-    var and__3822__auto____6556 = drop_data__6553 === instruisto.plural_review.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
+    var and__3822__auto____6556 = drop_data__6553 === instruisto.effects.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
     if(and__3822__auto____6556) {
-      return instruisto.plural_review.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id) === null
+      return instruisto.effects.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id) === null
     }else {
       return and__3822__auto____6556
     }
@@ -29546,26 +29551,22 @@ goog.require("goog.fx.dom");
 goog.require("goog.fx");
 goog.require("goog.fx.DragDrop");
 goog.require("goog.net.XhrIo");
-instruisto.basic_grammar_review_2.drop_drop_correct = function drop_drop_correct(source_id, target_id) {
-  domina.add_class_BANG_.call(null, domina.by_id.call(null, source_id), "highlight_correct");
-  return domina.add_class_BANG_.call(null, domina.by_id.call(null, target_id), "highlight_correct")
-};
 instruisto.basic_grammar_review_2.drag_drop_action = function drag_drop_action(event) {
-  var drag_data__124464 = event.dragSourceItem.data;
-  var drop_data__124465 = event.dropTargetItem.data;
-  var and__3822__auto____124466 = drag_data__124464 === drop_data__124465;
-  if(and__3822__auto____124466) {
-    drop_data__124465 === domina.set_text_BANG_.call(null, domina.by_id.call(null, "bgr-trans"), drag_data__124464)
+  var drag_data__6482 = event.dragSourceItem.data;
+  var drop_data__6483 = event.dropTargetItem.data;
+  var and__3822__auto____6484 = drag_data__6482 === drop_data__6483;
+  if(and__3822__auto____6484) {
+    drop_data__6483 === domina.set_text_BANG_.call(null, domina.by_id.call(null, "bgr-trans"), drag_data__6482)
   }else {
-    and__3822__auto____124466
+    and__3822__auto____6484
   }
   return null
 };
 instruisto.basic_grammar_review_2.init_drag_drop = function init_drag_drop(drag_id, drop_id, data) {
-  var drag__124468 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
-  drag__124468.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
-  goog.events.listen(drag__124468, "dragover", instruisto.basic_grammar_review_2.drag_drop_action);
-  return drag__124468.init()
+  var drag__6486 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
+  drag__6486.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
+  goog.events.listen(drag__6486, "dragover", instruisto.basic_grammar_review_2.drag_drop_action);
+  return drag__6486.init()
 };
 instruisto.basic_grammar_review_2.start_basic_grammar_review = function start_basic_grammar_review() {
   instruisto.basic_grammar_review_2.init_drag_drop.call(null, "bgr-noun-end-drag", "bgr-skrib-drop", "writing");
@@ -29591,13 +29592,13 @@ instruisto.plural.plural_map = cljs.core.ObjMap.fromObject(["\ufdd0'plural", "\u
 "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Plural Adjectives", "\ufdd0'body":"If there is an adjective associated with a noun, then the adjective must also take the plural ending. \r\n\r\ngrandaj katoj = big cats \r\n\r\naltaj hundoj = tall dogs", "\ufdd0'next":"plural-adj-obj"}), "\ufdd0'plural-adj-obj":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Plural Adjectives and Objects", "\ufdd0'body":"Whenever a noun takes the object ending -n, so too must the adjective. For example, Mi amas liberan libron = I love a free book. As we have already learned plural nouns make their adjectives plural also. When this happens the -n still comes last. Thus, Mi amas liberajn librojn = I love free books.", 
 "\ufdd0'next":"plural"})});
 instruisto.plural.load_next_section = function load_next_section(m) {
-  var entry_map__133149 = m == null ? cljs.core._lookup.call(null, instruisto.plural.plural_map, cljs.core.keyword.call(null, domina.attr.call(null, domina.by_id.call(null, "plural-link"), "title")), null) : m;
-  var elem_title__133150 = domina.by_id.call(null, "plural-title");
-  var elem_body__133151 = domina.by_id.call(null, "plural-body");
-  var elem_link__133152 = domina.by_id.call(null, "plural-link");
-  domina.set_text_BANG_.call(null, elem_title__133150, (new cljs.core.Keyword("\ufdd0'title")).call(null, entry_map__133149));
-  domina.set_text_BANG_.call(null, elem_body__133151, (new cljs.core.Keyword("\ufdd0'body")).call(null, entry_map__133149));
-  return domina.set_attr_BANG_.call(null, elem_link__133152, "title", (new cljs.core.Keyword("\ufdd0'next")).call(null, entry_map__133149))
+  var entry_map__6543 = m == null ? cljs.core._lookup.call(null, instruisto.plural.plural_map, cljs.core.keyword.call(null, domina.attr.call(null, domina.by_id.call(null, "plural-link"), "title")), null) : m;
+  var elem_title__6544 = domina.by_id.call(null, "plural-title");
+  var elem_body__6545 = domina.by_id.call(null, "plural-body");
+  var elem_link__6546 = domina.by_id.call(null, "plural-link");
+  domina.set_text_BANG_.call(null, elem_title__6544, (new cljs.core.Keyword("\ufdd0'title")).call(null, entry_map__6543));
+  domina.set_text_BANG_.call(null, elem_body__6545, (new cljs.core.Keyword("\ufdd0'body")).call(null, entry_map__6543));
+  return domina.set_attr_BANG_.call(null, elem_link__6546, "title", (new cljs.core.Keyword("\ufdd0'next")).call(null, entry_map__6543))
 };
 instruisto.plural.start_plural = function start_plural() {
   instruisto.plural.load_next_section.call(null, (new cljs.core.Keyword("\ufdd0'plural")).call(null, instruisto.plural.plural_map));
@@ -29608,27 +29609,92 @@ instruisto.plural.start_plural = function start_plural() {
     return instruisto.plural.load_next_section.call(null, null)
   })
 };
+goog.provide("instruisto.pronoun");
+goog.require("cljs.core");
+goog.require("instruisto.effects");
+goog.require("domina.events");
+goog.require("domina");
+goog.require("goog.events");
+goog.require("goog.fx.dom");
+goog.require("goog.fx");
+goog.require("goog.fx.DragDrop");
+goog.require("goog.net.XhrIo");
+instruisto.pronoun.highlight_remove_display = function highlight_remove_display(event) {
+  instruisto.effects.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
+  domina.set_text_BANG_.call(null, domina.by_id.call(null, "pronoun-title"), [cljs.core.str(domina.text.call(null, event.dragSourceItem.element)), cljs.core.str(" -> "), cljs.core.str(domina.text.call(null, event.dropTargetItem.element))].join(""));
+  domina.destroy_BANG_.call(null, event.dropTargetItem.element);
+  return domina.destroy_BANG_.call(null, event.dragSourceItem.element)
+};
+instruisto.pronoun.drag_drop_action = function drag_drop_action(event) {
+  var drag_data__171667 = event.dragSourceItem.data;
+  var drop_data__171668 = event.dropTargetItem.data;
+  var and__3822__auto____171669 = drag_data__171667 === drop_data__171668;
+  if(and__3822__auto____171669) {
+    var and__3822__auto____171670 = drop_data__171668 === instruisto.pronoun.highlight_remove_display.call(null, event);
+    if(and__3822__auto____171670) {
+      return instruisto.pronoun.highlight_remove_display.call(null, event) === null
+    }else {
+      return and__3822__auto____171670
+    }
+  }else {
+    return and__3822__auto____171669
+  }
+};
+instruisto.pronoun.init_drag_drop = function init_drag_drop(drag_id, drop_id, data) {
+  var drag__171672 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
+  drag__171672.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
+  goog.events.listen(drag__171672, "dragover", instruisto.pronoun.drag_drop_action);
+  return drag__171672.init()
+};
+instruisto.pronoun.start_review = function start_review() {
+  domina.set_styles_BANG_.call(null, domina.by_id.call(null, "pronoun_def_ordered"), cljs.core.ObjMap.fromObject(["\ufdd0'display"], {"\ufdd0'display":"none"}));
+  domina.set_styles_BANG_.call(null, domina.by_id.call(null, "pronoun-start-link"), cljs.core.ObjMap.fromObject(["\ufdd0'display"], {"\ufdd0'display":"none"}));
+  return domina.set_styles_BANG_.call(null, domina.by_id.call(null, "pronoun_def_random"), cljs.core.ObjMap.fromObject(["\ufdd0'display"], {"\ufdd0'display":""}))
+};
+instruisto.pronoun.start_pronoun = function start_pronoun() {
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-i-drag", "pronoun-i-drop", "i");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-you-drag", "pronoun-you-drop", "you");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-he-drag", "pronoun-he-drop", "he");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-she-drag", "pronoun-she-drop", "she");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-they-drag", "pronoun-they-drop", "they");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-it-drag", "pronoun-it-drop", "it");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-one-drag", "pronoun-one-drop", "one");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-my-drag", "pronoun-my-drop", "my");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-yours-drag", "pronoun-yours-drop", "yours");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-his-drag", "pronoun-his-drop", "his");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-hers-drag", "pronoun-hers-drop", "hers");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-their-drag", "pronoun-their-drop", "their");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-its-drag", "pronoun-its-drop", "its");
+  instruisto.pronoun.init_drag_drop.call(null, "pronoun-ones-drag", "pronoun-ones-drop", "ones");
+  domina.events.unlisten_BANG_.call(null, domina.by_id.call(null, "pronoun-start-link"));
+  return domina.events.listen_BANG_.call(null, domina.by_id.call(null, "pronoun-start-link"), "\ufdd0'click", function(event) {
+    domina.events.stop_propagation.call(null, event);
+    domina.events.prevent_default.call(null, event);
+    return instruisto.pronoun.start_review.call(null)
+  })
+};
 goog.provide("instruisto.basic_grammar");
 goog.require("cljs.core");
 goog.require("instruisto.effects");
 goog.require("domina.events");
 goog.require("domina");
 goog.require("goog.net.XhrIo");
-instruisto.basic_grammar.basic_grammar_map = cljs.core.ObjMap.fromObject(["\ufdd0'noun", "\ufdd0'adj", "\ufdd0'verb", "\ufdd0'verb-tense", "\ufdd0'verb-conditional", "\ufdd0'verb-imperative", "\ufdd0'object"], {"\ufdd0'noun":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Nouns (Substantivoj)", "\ufdd0'body":"hundo, tablo, birdo, koloro \r\n\r\nJust by reading these words aloud, you probably already know what they are. They are dog, table, bird and color respectively. You may have also noticed they all end in -o. This isn't a coincidence. All nouns (persons, places and things) end in -o.", 
+instruisto.basic_grammar.basic_grammar_map = cljs.core.ObjMap.fromObject(["\ufdd0'noun", "\ufdd0'adj", "\ufdd0'verb", "\ufdd0'verb-tense", "\ufdd0'verb-conditional", "\ufdd0'verb-imperative", "\ufdd0'adverb", "\ufdd0'object"], {"\ufdd0'noun":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Nouns (Substantivoj)", "\ufdd0'body":"hundo, tablo, birdo, koloro \r\n\r\nJust by reading these words aloud, you probably already know what they are. They are dog, table, bird and color respectively. You may have also noticed they all end in -o. This isn't a coincidence. All nouns (persons, places and things) end in -o.", 
 "\ufdd0'next":"adj"}), "\ufdd0'adj":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Adjectives (Adjektivoj)", "\ufdd0'body":"bela, granda, interesa, longa \r\n\r\nAdjectives follow a similar rule as nouns, but all adjectives end in -a. I'm sure you already guessed that the words are beautiful, large, interesting, and long.", "\ufdd0'next":"verb"}), "\ufdd0'verb":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Verbs (Verboj)", 
 "\ufdd0'body":"Verbs in any language are more complex than nouns or adjectives. Without verbs, nothing would get done. But we also need to know when something is done. Esperanto follows verb conjugation like in Romance languages, but all verbs are regular. There are no exceptions! The infinitive ending for verbs is -i, i.e. esti = to be.", "\ufdd0'next":"verb-tense"}), "\ufdd0'verb-tense":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Verb Tenses", "\ufdd0'body":"If esti means to be, we need a way of expressing verb tense (past, present and future). The verb endings for these are -is, -as and -os respectively.\r\n\r\nMi estis = I was \r\n\r\nMi estas = I am \r\n\r\nMi estas = I will be", 
 "\ufdd0'next":"verb-conditional"}), "\ufdd0'verb-conditional":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Verb Conditional", "\ufdd0'body":"The word would is considered fluff in English when compared to Esperanto. Would proceeds a verb, and thus can be part of the verb itself. We use the ending -us to indicate when we would have something happen.\r\n\r\nEstus bone. = It would be good. \r\n\r\nEstus bone, se vi learnus Esperanton. = If would be good, if you would learn Esperanto. Note: Esperanton is not a typo. Stay tuned.", 
-"\ufdd0'next":"verb-imperative"}), "\ufdd0'verb-imperative":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Verb Imperative", "\ufdd0'body":"Sometimes you just want to yell at someone to do something. In this instance we have the -u ending. This is useful for when you want to use a command.\r\n\r\nKantu! = Sing! \r\n\r\nKuru! = Run! \r\n\r\nEstu silenta! = Be quiet!", "\ufdd0'next":"object"}), "\ufdd0'object":cljs.core.ObjMap.fromObject(["\ufdd0'title", 
-"\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Object (Objekto)", "\ufdd0'body":'The -n ending is used to mark the object of a sentenace. Remember back to the sentence "Estus bone, se vi learnus Esperanton.", here the word Esperanto is the object and takes the -n ending. This can take sometime to grasp for an English speaker, because the subject and object of a sentence is determined by word order. Generally, a verb proceeds an object. The easiest way to remember the rules are:\r\n\r\nWho (or what) is doing the action? That\'s the subject.\r\n\r\nWho (or what) is on the other end of the action, "receiving" it? That\'s the object.\r\n\r\nMi vidas vin. = I see you.\r\n\r\nMin vidas vi. = You see me.', 
+"\ufdd0'next":"verb-imperative"}), "\ufdd0'verb-imperative":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Verb Imperative", "\ufdd0'body":"Sometimes you just want to yell at someone to do something. In this instance we have the -u ending. This is useful for when you want to use a command.\r\n\r\nKantu! = Sing! \r\n\r\nKuru! = Run! \r\n\r\nEstu silenta! = Be quiet!", "\ufdd0'next":"adverb"}), "\ufdd0'adverb":cljs.core.ObjMap.fromObject(["\ufdd0'title", 
+"\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Adverbs (Adverboj)", "\ufdd0'body":"Adverbs describe verbs. Adverbs in English tend to end in -ly. In Esperanto you can turn a word into an adverb by adding the -e ending.\r\n\r\nThe adjectives bela, granda, interesa and longa used earlier are bele, grande, interese and longe in their adverb form.\r\n\r\nAdverbs precede verbs, so you might say something like 'Mi rapide legis la libro.', which means 'I quickly read the book.'", "\ufdd0'next":"object"}), 
+"\ufdd0'object":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Object (Objekto)", "\ufdd0'body":'The -n ending is used to mark the object of a sentenace. Remember back to the sentence "Estus bone, se vi learnus Esperanton.", here the word Esperanto is the object and takes the -n ending. This can take sometime to grasp for an English speaker, because the subject and object of a sentence is determined by word order. Generally, a verb proceeds an object. The easiest way to remember the rules are:\r\n\r\nWho (or what) is doing the action? That\'s the subject.\r\n\r\nWho (or what) is on the other end of the action, "receiving" it? That\'s the object.\r\n\r\nMi vidas vin. = I see you.\r\n\r\nMin vidas vi. = You see me.', 
 "\ufdd0'next":"noun"})});
 instruisto.basic_grammar.load_next_grammar_section = function load_next_grammar_section(m) {
-  var entry_map__227113 = m == null ? cljs.core._lookup.call(null, instruisto.basic_grammar.basic_grammar_map, cljs.core.keyword.call(null, domina.attr.call(null, domina.by_id.call(null, "basic-grammar-link"), "title")), null) : m;
-  var elem_title__227114 = domina.by_id.call(null, "basic-grammar-title");
-  var elem_body__227115 = domina.by_id.call(null, "basic-grammar-body");
-  var elem_link__227116 = domina.by_id.call(null, "basic-grammar-link");
-  domina.set_text_BANG_.call(null, elem_title__227114, (new cljs.core.Keyword("\ufdd0'title")).call(null, entry_map__227113));
-  domina.set_text_BANG_.call(null, elem_body__227115, (new cljs.core.Keyword("\ufdd0'body")).call(null, entry_map__227113));
-  return domina.set_attr_BANG_.call(null, elem_link__227116, "title", (new cljs.core.Keyword("\ufdd0'next")).call(null, entry_map__227113))
+  var entry_map__49811 = m == null ? cljs.core._lookup.call(null, instruisto.basic_grammar.basic_grammar_map, cljs.core.keyword.call(null, domina.attr.call(null, domina.by_id.call(null, "basic-grammar-link"), "title")), null) : m;
+  var elem_title__49812 = domina.by_id.call(null, "basic-grammar-title");
+  var elem_body__49813 = domina.by_id.call(null, "basic-grammar-body");
+  var elem_link__49814 = domina.by_id.call(null, "basic-grammar-link");
+  domina.set_text_BANG_.call(null, elem_title__49812, (new cljs.core.Keyword("\ufdd0'title")).call(null, entry_map__49811));
+  domina.set_text_BANG_.call(null, elem_body__49813, (new cljs.core.Keyword("\ufdd0'body")).call(null, entry_map__49811));
+  return domina.set_attr_BANG_.call(null, elem_link__49814, "title", (new cljs.core.Keyword("\ufdd0'next")).call(null, entry_map__49811))
 };
 instruisto.basic_grammar.start_basic_grammar = function start_basic_grammar() {
   instruisto.basic_grammar.load_next_grammar_section.call(null, (new cljs.core.Keyword("\ufdd0'noun")).call(null, instruisto.basic_grammar.basic_grammar_map));
@@ -29658,30 +29724,32 @@ goog.require("goog.fx.dom");
 goog.require("goog.fx");
 goog.require("goog.fx.DragDrop");
 goog.require("goog.net.XhrIo");
-instruisto.suffix_review.drop_drop_correct = function drop_drop_correct(source_id, target_id) {
-  domina.add_class_BANG_.call(null, domina.by_id.call(null, source_id), "highlight_correct");
-  return domina.add_class_BANG_.call(null, domina.by_id.call(null, target_id), "highlight_correct")
+instruisto.suffix_review.highlight_remove_display = function highlight_remove_display(event) {
+  instruisto.effects.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
+  domina.set_text_BANG_.call(null, domina.by_id.call(null, "suffix-review-title"), [cljs.core.str(domina.text.call(null, event.dragSourceItem.element)), cljs.core.str(" "), cljs.core.str(domina.text.call(null, event.dropTargetItem.element))].join(""));
+  domina.destroy_BANG_.call(null, event.dropTargetItem.element);
+  return domina.destroy_BANG_.call(null, event.dragSourceItem.element)
 };
 instruisto.suffix_review.drag_drop_action = function drag_drop_action(event) {
-  var drag_data__148081 = event.dragSourceItem.data;
-  var drop_data__148082 = event.dropTargetItem.data;
-  var and__3822__auto____148083 = drag_data__148081 === drop_data__148082;
-  if(and__3822__auto____148083) {
-    var and__3822__auto____148084 = drop_data__148082 === instruisto.suffix_review.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
-    if(and__3822__auto____148084) {
-      return instruisto.suffix_review.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id) === null
+  var drag_data__179503 = event.dragSourceItem.data;
+  var drop_data__179504 = event.dropTargetItem.data;
+  var and__3822__auto____179505 = drag_data__179503 === drop_data__179504;
+  if(and__3822__auto____179505) {
+    var and__3822__auto____179506 = drop_data__179504 === instruisto.suffix_review.highlight_remove_display.call(null, event);
+    if(and__3822__auto____179506) {
+      return instruisto.suffix_review.highlight_remove_display.call(null, event) === null
     }else {
-      return and__3822__auto____148084
+      return and__3822__auto____179506
     }
   }else {
-    return and__3822__auto____148083
+    return and__3822__auto____179505
   }
 };
 instruisto.suffix_review.init_drag_drop = function init_drag_drop(drag_id, drop_id, data) {
-  var drag__148086 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
-  drag__148086.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
-  goog.events.listen(drag__148086, "dragover", instruisto.suffix_review.drag_drop_action);
-  return drag__148086.init()
+  var drag__179508 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
+  drag__179508.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
+  goog.events.listen(drag__179508, "dragover", instruisto.suffix_review.drag_drop_action);
+  return drag__179508.init()
 };
 instruisto.suffix_review.start_review = function start_review() {
   domina.set_styles_BANG_.call(null, domina.by_id.call(null, "suffix_def_ordered"), cljs.core.ObjMap.fromObject(["\ufdd0'display"], {"\ufdd0'display":"none"}));
@@ -29720,8 +29788,8 @@ instruisto.suffix_review.start_suffix_review = function start_suffix_review() {
   instruisto.suffix_review.init_drag_drop.call(null, "suffix-um-drag", "suffix-um-drop", "um");
   instruisto.suffix_review.init_drag_drop.call(null, "suffix-cxj-drag", "suffix-cxj-drop", "cxj");
   instruisto.suffix_review.init_drag_drop.call(null, "suffix-nj-drag", "suffix-nj-drop", "nj");
-  domina.events.unlisten_BANG_.call(null, domina.by_id.call(null, "prefix-start-link"));
-  return domina.events.listen_BANG_.call(null, domina.by_id.call(null, "prefix-start-link"), "\ufdd0'click", function(event) {
+  domina.events.unlisten_BANG_.call(null, domina.by_id.call(null, "suffix-start-link"));
+  return domina.events.listen_BANG_.call(null, domina.by_id.call(null, "suffix-start-link"), "\ufdd0'click", function(event) {
     domina.events.stop_propagation.call(null, event);
     domina.events.prevent_default.call(null, event);
     return instruisto.suffix_review.start_review.call(null)
@@ -29738,13 +29806,13 @@ instruisto.introduction.introduction_map = cljs.core.ObjMap.fromObject(["\ufdd0'
 "\ufdd0'next":"who"}), "\ufdd0'who":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Who?", "\ufdd0'body":"Exact number of Esperanto speakers is unknown since the language has no homeland. Numbers show anywhere between 10,000 \u2013 2,000,000 L2 speakers. Regardless of the number of speakers, Esperanto is an active language with the World Congress of Esperanto held annually. There is a thriving community of Esperanto speakers producing music, books, pod-casts and websites around the language. Even if you don't become a fluent Esperanto speaker, learning the language will prime you when learning another foreign language.", 
 "\ufdd0'next":"what"})});
 instruisto.introduction.load_next_section = function load_next_section(m) {
-  var entry_map__129233 = m == null ? cljs.core._lookup.call(null, instruisto.introduction.introduction_map, cljs.core.keyword.call(null, domina.attr.call(null, domina.by_id.call(null, "introduction-link"), "title")), null) : m;
-  var elem_title__129234 = domina.by_id.call(null, "introduction-title");
-  var elem_body__129235 = domina.by_id.call(null, "introduction-body");
-  var elem_link__129236 = domina.by_id.call(null, "introduction-link");
-  domina.set_text_BANG_.call(null, elem_title__129234, (new cljs.core.Keyword("\ufdd0'title")).call(null, entry_map__129233));
-  domina.set_text_BANG_.call(null, elem_body__129235, (new cljs.core.Keyword("\ufdd0'body")).call(null, entry_map__129233));
-  return domina.set_attr_BANG_.call(null, elem_link__129236, "title", (new cljs.core.Keyword("\ufdd0'next")).call(null, entry_map__129233))
+  var entry_map__6535 = m == null ? cljs.core._lookup.call(null, instruisto.introduction.introduction_map, cljs.core.keyword.call(null, domina.attr.call(null, domina.by_id.call(null, "introduction-link"), "title")), null) : m;
+  var elem_title__6536 = domina.by_id.call(null, "introduction-title");
+  var elem_body__6537 = domina.by_id.call(null, "introduction-body");
+  var elem_link__6538 = domina.by_id.call(null, "introduction-link");
+  domina.set_text_BANG_.call(null, elem_title__6536, (new cljs.core.Keyword("\ufdd0'title")).call(null, entry_map__6535));
+  domina.set_text_BANG_.call(null, elem_body__6537, (new cljs.core.Keyword("\ufdd0'body")).call(null, entry_map__6535));
+  return domina.set_attr_BANG_.call(null, elem_link__6538, "title", (new cljs.core.Keyword("\ufdd0'next")).call(null, entry_map__6535))
 };
 instruisto.introduction.start_introduction = function start_introduction() {
   instruisto.introduction.load_next_section.call(null, (new cljs.core.Keyword("\ufdd0'what")).call(null, instruisto.introduction.introduction_map));
@@ -29765,30 +29833,32 @@ goog.require("goog.fx.dom");
 goog.require("goog.fx");
 goog.require("goog.fx.DragDrop");
 goog.require("goog.net.XhrIo");
-instruisto.prefix_review.drop_drop_correct = function drop_drop_correct(source_id, target_id) {
-  domina.add_class_BANG_.call(null, domina.by_id.call(null, source_id), "highlight_correct");
-  return domina.add_class_BANG_.call(null, domina.by_id.call(null, target_id), "highlight_correct")
+instruisto.prefix_review.highlight_remove_display = function highlight_remove_display(event) {
+  instruisto.effects.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
+  domina.set_text_BANG_.call(null, domina.by_id.call(null, "prefix-review-title"), [cljs.core.str(domina.text.call(null, event.dragSourceItem.element)), cljs.core.str(" "), cljs.core.str(domina.text.call(null, event.dropTargetItem.element))].join(""));
+  domina.destroy_BANG_.call(null, event.dropTargetItem.element);
+  return domina.destroy_BANG_.call(null, event.dragSourceItem.element)
 };
 instruisto.prefix_review.drag_drop_action = function drag_drop_action(event) {
-  var drag_data__171641 = event.dragSourceItem.data;
-  var drop_data__171642 = event.dropTargetItem.data;
-  var and__3822__auto____171643 = drag_data__171641 === drop_data__171642;
-  if(and__3822__auto____171643) {
-    var and__3822__auto____171644 = drop_data__171642 === instruisto.prefix_review.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id);
-    if(and__3822__auto____171644) {
-      return instruisto.prefix_review.drop_drop_correct.call(null, event.dragSourceItem.element.id, event.dropTargetItem.element.id) === null
+  var drag_data__89389 = event.dragSourceItem.data;
+  var drop_data__89390 = event.dropTargetItem.data;
+  var and__3822__auto____89391 = drag_data__89389 === drop_data__89390;
+  if(and__3822__auto____89391) {
+    var and__3822__auto____89392 = drop_data__89390 === instruisto.prefix_review.highlight_remove_display.call(null, event);
+    if(and__3822__auto____89392) {
+      return instruisto.prefix_review.highlight_remove_display.call(null, event) === null
     }else {
-      return and__3822__auto____171644
+      return and__3822__auto____89392
     }
   }else {
-    return and__3822__auto____171643
+    return and__3822__auto____89391
   }
 };
 instruisto.prefix_review.init_drag_drop = function init_drag_drop(drag_id, drop_id, data) {
-  var drag__171646 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
-  drag__171646.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
-  goog.events.listen(drag__171646, "dragover", instruisto.prefix_review.drag_drop_action);
-  return drag__171646.init()
+  var drag__89394 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
+  drag__89394.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
+  goog.events.listen(drag__89394, "dragover", instruisto.prefix_review.drag_drop_action);
+  return drag__89394.init()
 };
 instruisto.prefix_review.start_review = function start_review() {
   domina.set_styles_BANG_.call(null, domina.by_id.call(null, "prefix_def_ordered"), cljs.core.ObjMap.fromObject(["\ufdd0'display"], {"\ufdd0'display":"none"}));
@@ -29831,13 +29901,13 @@ goog.require("goog.net.XhrIo");
 instruisto.prefix.prefix_map = cljs.core.ObjMap.fromObject(["\ufdd0'prefix"], {"\ufdd0'prefix":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Prefix System", "\ufdd0'body":"Remember the word malgrandajn in the plurals review section? Malgranda doesn't mean big and bad, mal is a prefix that negates a root word. Like in English where you might use un- to denote the opposite of something ie. tie or untie. The meat and potatoes of Esperanto are the prefix and suffix system it uses. By knowing one word, in this case granda which means large, with only the addition of mal-, malgranda means small. You may see the power of Esperanto is knowing a limited set of root words, but with added prefixes and suffixes your vocabulary can increased ten fold. Master these, and you'll have a considerable amount of Esperanto under your belt.", 
 "\ufdd0'next":""})});
 instruisto.prefix.load_next_section = function load_next_section(m) {
-  var entry_map__175559 = m == null ? cljs.core._lookup.call(null, instruisto.prefix.prefix_map, cljs.core.keyword.call(null, domina.attr.call(null, domina.by_id.call(null, "prefix-link"), "title")), null) : m;
-  var elem_title__175560 = domina.by_id.call(null, "prefix-title");
-  var elem_body__175561 = domina.by_id.call(null, "prefix-body");
-  var elem_link__175562 = domina.by_id.call(null, "prefix-link");
-  domina.set_text_BANG_.call(null, elem_title__175560, (new cljs.core.Keyword("\ufdd0'title")).call(null, entry_map__175559));
-  domina.set_text_BANG_.call(null, elem_body__175561, (new cljs.core.Keyword("\ufdd0'body")).call(null, entry_map__175559));
-  return domina.set_attr_BANG_.call(null, elem_link__175562, "title", (new cljs.core.Keyword("\ufdd0'next")).call(null, entry_map__175559))
+  var entry_map__6573 = m == null ? cljs.core._lookup.call(null, instruisto.prefix.prefix_map, cljs.core.keyword.call(null, domina.attr.call(null, domina.by_id.call(null, "prefix-link"), "title")), null) : m;
+  var elem_title__6574 = domina.by_id.call(null, "prefix-title");
+  var elem_body__6575 = domina.by_id.call(null, "prefix-body");
+  var elem_link__6576 = domina.by_id.call(null, "prefix-link");
+  domina.set_text_BANG_.call(null, elem_title__6574, (new cljs.core.Keyword("\ufdd0'title")).call(null, entry_map__6573));
+  domina.set_text_BANG_.call(null, elem_body__6575, (new cljs.core.Keyword("\ufdd0'body")).call(null, entry_map__6573));
+  return domina.set_attr_BANG_.call(null, elem_link__6576, "title", (new cljs.core.Keyword("\ufdd0'next")).call(null, entry_map__6573))
 };
 instruisto.prefix.start_prefix = function start_prefix() {
   instruisto.prefix.load_next_section.call(null, (new cljs.core.Keyword("\ufdd0'prefix")).call(null, instruisto.prefix.prefix_map));
@@ -29851,12 +29921,14 @@ instruisto.prefix.start_prefix = function start_prefix() {
 goog.provide("instruisto.client");
 goog.require("cljs.core");
 goog.require("instruisto.basic_grammar_review_1");
+goog.require("instruisto.contact");
 goog.require("instruisto.basic_grammar_review_2");
 goog.require("instruisto.introduction");
 goog.require("domina.events");
 goog.require("instruisto.alphabet");
 goog.require("instruisto.prefix_review");
 goog.require("instruisto.plural_review");
+goog.require("instruisto.pronoun");
 goog.require("instruisto.prefix");
 goog.require("instruisto.basic_grammar");
 goog.require("instruisto.for_programmer");
@@ -29889,6 +29961,10 @@ instruisto.client.main = function main() {
   domina.events.listen_BANG_.call(null, domina.by_id.call(null, "link-for-programmer"), "\ufdd0'click", function(event) {
     instruisto.client.click_defaults.call(null, event, domina.by_id.call(null, "for-programmer-section"));
     return instruisto.for_programmer.start_for_programmer.call(null)
+  });
+  domina.events.listen_BANG_.call(null, domina.by_id.call(null, "link-contact"), "\ufdd0'click", function(event) {
+    instruisto.client.click_defaults.call(null, event, domina.by_id.call(null, "contact-section"));
+    return instruisto.contact.start_contact.call(null)
   });
   domina.events.listen_BANG_.call(null, domina.by_id.call(null, "link-introduction"), "\ufdd0'click", function(event) {
     instruisto.client.click_defaults.call(null, event, domina.by_id.call(null, "introduction-section"));
@@ -29933,9 +30009,13 @@ instruisto.client.main = function main() {
     instruisto.client.click_defaults.call(null, event, domina.by_id.call(null, "suffix-section"));
     return instruisto.suffix.start_suffix.call(null)
   });
-  return domina.events.listen_BANG_.call(null, domina.by_id.call(null, "link-suffix-review"), "\ufdd0'click", function(event) {
+  domina.events.listen_BANG_.call(null, domina.by_id.call(null, "link-suffix-review"), "\ufdd0'click", function(event) {
     instruisto.client.click_defaults.call(null, event, domina.by_id.call(null, "suffix-review-section"));
     return instruisto.suffix_review.start_suffix_review.call(null)
+  });
+  return domina.events.listen_BANG_.call(null, domina.by_id.call(null, "link-pronoun"), "\ufdd0'click", function(event) {
+    instruisto.client.click_defaults.call(null, event, domina.by_id.call(null, "pronoun-section"));
+    return instruisto.pronoun.start_pronoun.call(null)
   })
 };
 goog.exportSymbol("instruisto.client.main", instruisto.client.main);

@@ -29,7 +29,11 @@
   :verb-imperative {
     :title "Verb Imperative"
     :body "Sometimes you just want to yell at someone to do something. In this instance we have the -u ending. This is useful for when you want to use a command.\u000D\u000A\u000D\u000AKantu! = Sing! \u000D\u000A\u000D\u000AKuru! = Run! \u000D\u000A\u000D\u000AEstu silenta! = Be quiet!"
-    :next "object" }
+    :next "adverb" }
+  :adverb {
+    :title "Adverbs (Adverboj)"
+    :body "Adverbs describe verbs. Adverbs in English tend to end in -ly. In Esperanto you can turn a word into an adverb by adding the -e ending.\u000D\u000A\u000D\u000AThe adjectives bela, granda, interesa and longa used earlier are bele, grande, interese and longe in their adverb form.\u000D\u000A\u000D\u000AAdverbs precede verbs, so you might say something like 'Mi rapide legis la libro.', which means 'I quickly read the book.'" 
+    :next "object"} 
   :object {
     :title "Object (Objekto)"
     :body "The -n ending is used to mark the object of a sentenace. Remember back to the sentence \"Estus bone, se vi learnus Esperanton.\", here the word Esperanto is the object and takes the -n ending. This can take sometime to grasp for an English speaker, because the subject and object of a sentence is determined by word order. Generally, a verb proceeds an object. The easiest way to remember the rules are:\u000D\u000A\u000D\u000AWho (or what) is doing the action? That's the subject.\u000D\u000A\u000D\u000AWho (or what) is on the other end of the action, \"receiving\" it? That's the object.\u000D\u000A\u000D\u000AMi vidas vin. = I see you.\u000D\u000A\u000D\u000AMin vidas vi. = You see me."

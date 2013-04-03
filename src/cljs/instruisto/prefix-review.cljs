@@ -8,13 +8,19 @@
             [domina.events :as events]
             [instruisto.effects :as effects]))
 
-(defn drop-drop-correct [source-id target-id]
-  (d/add-class! (d/by-id source-id) "highlight_correct")
-  (d/add-class! (d/by-id target-id) "highlight_correct"))
+(defn highlight-remove-display [event]
+  (effects/drop-drop-correct 
+          (.-id 
+            (.-element 
+              (.-dragSourceItem event))) 
+          (.-id (.-element (.-dropTargetItem event))))
+  (d/set-text! (d/by-id "prefix-review-title") (str (d/text (.-element (.-dragSourceItem event))) " " (d/text (.-element (.-dropTargetItem event)))))
+  (d/destroy! (.-element (.-dropTargetItem event)))
+  (d/destroy! (.-element (.-dragSourceItem event))))
 
 (defn drag-drop-action [event]
   (let [drag-data (.-data (.-dragSourceItem event)) drop-data (.-data (.-dropTargetItem event))]
-    (== drag-data drop-data (drop-drop-correct (.-id (.-element (.-dragSourceItem event))) (.-id (.-element (.-dropTargetItem event)))) nil)))
+    (== drag-data drop-data (highlight-remove-display event) nil)))
 
 (defn init-drag-drop [drag-id drop-id data]
     (let [drag (goog.fx.DragDrop. (d/by-id drag-id) data)]
@@ -44,6 +50,4 @@
                   (fn [event]
                      (events/stop-propagation event)
                      (events/prevent-default event)
-                     (start-review)))
-  
-  )
+                     (start-review))))

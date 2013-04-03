@@ -8,10 +8,6 @@ goog.require('goog.fx.dom');
 goog.require('goog.fx');
 goog.require('goog.fx.DragDrop');
 goog.require('goog.net.XhrIo');
-instruisto.plural_review.drop_drop_correct = (function drop_drop_correct(source_id,target_id){
-domina.add_class_BANG_.call(null,domina.by_id.call(null,source_id),"highlight_correct");
-return domina.add_class_BANG_.call(null,domina.by_id.call(null,target_id),"highlight_correct");
-});
 instruisto.plural_review.drag_drop_action = (function drag_drop_action(event){
 var drag_data__6552 = event.dragSourceItem.data;
 var drop_data__6553 = event.dropTargetItem.data;
@@ -23,9 +19,9 @@ if(and__3822__auto____6554)
 }
 var and__3822__auto____6555 = (drag_data__6552 === drop_data__6553);
 if(and__3822__auto____6555)
-{var and__3822__auto____6556 = (drop_data__6553 === instruisto.plural_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
+{var and__3822__auto____6556 = (drop_data__6553 === instruisto.effects.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
 if(and__3822__auto____6556)
-{return (instruisto.plural_review.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id) === null);
+{return (instruisto.effects.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id) === null);
 } else
 {return and__3822__auto____6556;
 }

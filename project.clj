@@ -12,7 +12,6 @@
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [domina "1.0.0"]
                  [compojure "1.1.0"]
-                 ;[ring/ring-jetty-adapter "1.1.1"]
                  [ring "1.0.2"]
                  [enfocus "1.0.0-beta3"]]
   
