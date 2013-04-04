@@ -17,6 +17,10 @@
             [instruisto.for-programmer :as for-programmer]
             [instruisto.contact :as contact]
             [instruisto.pronoun :as pronoun]
+            [instruisto.question :as question]
+            [instruisto.preposition :as preposition]
+            [instruisto.particle :as particle]
+            [instruisto.correlative :as correlative]
             [instruisto.effects :as effects]))
 
 (defn click-defaults [event elem]
@@ -112,4 +116,24 @@
                  :click
                  (fn [event]
                    (click-defaults event (d/by-id "pronoun-section"))
-                   (pronoun/start-pronoun))))
+                   (pronoun/start-pronoun)))
+  (events/listen! (d/by-id "link-question")
+                 :click
+                 (fn [event]
+                   (click-defaults event (d/by-id "question-section"))
+                   (question/start-question)))
+  (events/listen! (d/by-id "link-correlative")
+                 :click
+                 (fn [event]
+                   (click-defaults event (d/by-id "correlative-section"))
+                   (correlative/start-correlative)))
+   (events/listen! (d/by-id "link-preposition")
+                 :click
+                 (fn [event]
+                   (click-defaults event (d/by-id "preposition-section"))
+                   (preposition/start-preposition)))
+    (events/listen! (d/by-id "link-particle")
+                 :click
+                 (fn [event]
+                   (click-defaults event (d/by-id "particle-section"))
+                   (particle/start-particle))))

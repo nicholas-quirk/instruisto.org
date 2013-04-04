@@ -9,31 +9,31 @@ goog.require('goog.fx');
 goog.require('goog.fx.DragDrop');
 goog.require('goog.net.XhrIo');
 instruisto.plural_review.drag_drop_action = (function drag_drop_action(event){
-var drag_data__6552 = event.dragSourceItem.data;
-var drop_data__6553 = event.dropTargetItem.data;
-var and__3822__auto____6554 = (drag_data__6552 === drop_data__6553);
-if(and__3822__auto____6554)
-{(drop_data__6553 === domina.set_text_BANG_.call(null,domina.by_id.call(null,event.dropTargetItem.element.id),drag_data__6552));
+var drag_data__6562 = event.dragSourceItem.data;
+var drop_data__6563 = event.dropTargetItem.data;
+var and__3822__auto____6564 = (drag_data__6562 === drop_data__6563);
+if(and__3822__auto____6564)
+{(drop_data__6563 === domina.set_text_BANG_.call(null,domina.by_id.call(null,event.dropTargetItem.element.id),drag_data__6562));
 } else
-{and__3822__auto____6554;
+{and__3822__auto____6564;
 }
-var and__3822__auto____6555 = (drag_data__6552 === drop_data__6553);
-if(and__3822__auto____6555)
-{var and__3822__auto____6556 = (drop_data__6553 === instruisto.effects.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
-if(and__3822__auto____6556)
+var and__3822__auto____6565 = (drag_data__6562 === drop_data__6563);
+if(and__3822__auto____6565)
+{var and__3822__auto____6566 = (drop_data__6563 === instruisto.effects.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
+if(and__3822__auto____6566)
 {return (instruisto.effects.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id) === null);
 } else
-{return and__3822__auto____6556;
+{return and__3822__auto____6566;
 }
 } else
-{return and__3822__auto____6555;
+{return and__3822__auto____6565;
 }
 });
 instruisto.plural_review.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__6558 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__6558.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__6558,"dragover",instruisto.plural_review.drag_drop_action);
-return drag__6558.init();
+var drag__6568 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__6568.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__6568,"dragover",instruisto.plural_review.drag_drop_action);
+return drag__6568.init();
 });
 instruisto.plural_review.start_plural_review = (function start_plural_review(){
 instruisto.plural_review.init_drag_drop.call(null,"plural-review-malgrandajn-drag","plural-review-malgrandajn-drop","malgrandajn");

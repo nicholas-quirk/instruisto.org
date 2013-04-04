@@ -15,25 +15,25 @@ domina.destroy_BANG_.call(null,event.dropTargetItem.element);
 return domina.destroy_BANG_.call(null,event.dragSourceItem.element);
 });
 instruisto.suffix_review.drag_drop_action = (function drag_drop_action(event){
-var drag_data__179503 = event.dragSourceItem.data;
-var drop_data__179504 = event.dropTargetItem.data;
-var and__3822__auto____179505 = (drag_data__179503 === drop_data__179504);
-if(and__3822__auto____179505)
-{var and__3822__auto____179506 = (drop_data__179504 === instruisto.suffix_review.highlight_remove_display.call(null,event));
-if(and__3822__auto____179506)
+var drag_data__6601 = event.dragSourceItem.data;
+var drop_data__6602 = event.dropTargetItem.data;
+var and__3822__auto____6603 = (drag_data__6601 === drop_data__6602);
+if(and__3822__auto____6603)
+{var and__3822__auto____6604 = (drop_data__6602 === instruisto.suffix_review.highlight_remove_display.call(null,event));
+if(and__3822__auto____6604)
 {return (instruisto.suffix_review.highlight_remove_display.call(null,event) === null);
 } else
-{return and__3822__auto____179506;
+{return and__3822__auto____6604;
 }
 } else
-{return and__3822__auto____179505;
+{return and__3822__auto____6603;
 }
 });
 instruisto.suffix_review.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__179508 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__179508.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__179508,"dragover",instruisto.suffix_review.drag_drop_action);
-return drag__179508.init();
+var drag__6606 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__6606.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__6606,"dragover",instruisto.suffix_review.drag_drop_action);
+return drag__6606.init();
 });
 instruisto.suffix_review.start_review = (function start_review(){
 domina.set_styles_BANG_.call(null,domina.by_id.call(null,"suffix_def_ordered"),cljs.core.ObjMap.fromObject(["\uFDD0'display"],{"\uFDD0'display":"none"}));

@@ -1,6 +1,7 @@
 goog.provide('instruisto.client');
 goog.require('cljs.core');
 goog.require('instruisto.basic_grammar_review_1');
+goog.require('instruisto.preposition');
 goog.require('instruisto.contact');
 goog.require('instruisto.basic_grammar_review_2');
 goog.require('instruisto.introduction');
@@ -11,14 +12,17 @@ goog.require('instruisto.plural_review');
 goog.require('instruisto.pronoun');
 goog.require('instruisto.prefix');
 goog.require('instruisto.basic_grammar');
+goog.require('instruisto.question');
 goog.require('instruisto.for_programmer');
 goog.require('domina');
 goog.require('instruisto.for_language_learner');
 goog.require('instruisto.suffix_review');
 goog.require('instruisto.effects');
 goog.require('goog.net.XhrIo');
+goog.require('instruisto.particle');
 goog.require('instruisto.suffix');
 goog.require('instruisto.plural');
+goog.require('instruisto.correlative');
 instruisto.client.click_defaults = (function click_defaults(event,elem){
 domina.events.stop_propagation.call(null,event);
 domina.events.prevent_default.call(null,event);
@@ -93,9 +97,25 @@ domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-suffix-review"
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"suffix-review-section"));
 return instruisto.suffix_review.start_suffix_review.call(null);
 }));
-return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-pronoun"),"\uFDD0'click",(function (event){
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-pronoun"),"\uFDD0'click",(function (event){
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"pronoun-section"));
 return instruisto.pronoun.start_pronoun.call(null);
+}));
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-question"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"question-section"));
+return instruisto.question.start_question.call(null);
+}));
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-correlative"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"correlative-section"));
+return instruisto.correlative.start_correlative.call(null);
+}));
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-preposition"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"preposition-section"));
+return instruisto.preposition.start_preposition.call(null);
+}));
+return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-particle"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"particle-section"));
+return instruisto.particle.start_particle.call(null);
 }));
 });
 goog.exportSymbol('instruisto.client.main', instruisto.client.main);

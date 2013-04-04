@@ -15,25 +15,25 @@ domina.destroy_BANG_.call(null,event.dropTargetItem.element);
 return domina.destroy_BANG_.call(null,event.dragSourceItem.element);
 });
 instruisto.pronoun.drag_drop_action = (function drag_drop_action(event){
-var drag_data__171667 = event.dragSourceItem.data;
-var drop_data__171668 = event.dropTargetItem.data;
-var and__3822__auto____171669 = (drag_data__171667 === drop_data__171668);
-if(and__3822__auto____171669)
-{var and__3822__auto____171670 = (drop_data__171668 === instruisto.pronoun.highlight_remove_display.call(null,event));
-if(and__3822__auto____171670)
+var drag_data__6591 = event.dragSourceItem.data;
+var drop_data__6592 = event.dropTargetItem.data;
+var and__3822__auto____6593 = (drag_data__6591 === drop_data__6592);
+if(and__3822__auto____6593)
+{var and__3822__auto____6594 = (drop_data__6592 === instruisto.pronoun.highlight_remove_display.call(null,event));
+if(and__3822__auto____6594)
 {return (instruisto.pronoun.highlight_remove_display.call(null,event) === null);
 } else
-{return and__3822__auto____171670;
+{return and__3822__auto____6594;
 }
 } else
-{return and__3822__auto____171669;
+{return and__3822__auto____6593;
 }
 });
 instruisto.pronoun.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__171672 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__171672.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__171672,"dragover",instruisto.pronoun.drag_drop_action);
-return drag__171672.init();
+var drag__6596 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__6596.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__6596,"dragover",instruisto.pronoun.drag_drop_action);
+return drag__6596.init();
 });
 instruisto.pronoun.start_review = (function start_review(){
 domina.set_styles_BANG_.call(null,domina.by_id.call(null,"pronoun_def_ordered"),cljs.core.ObjMap.fromObject(["\uFDD0'display"],{"\uFDD0'display":"none"}));
