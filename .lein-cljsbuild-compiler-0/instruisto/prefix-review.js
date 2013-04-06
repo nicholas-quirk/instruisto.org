@@ -15,25 +15,25 @@ domina.destroy_BANG_.call(null,event.dropTargetItem.element);
 return domina.destroy_BANG_.call(null,event.dragSourceItem.element);
 });
 instruisto.prefix_review.drag_drop_action = (function drag_drop_action(event){
-var drag_data__6581 = event.dragSourceItem.data;
-var drop_data__6582 = event.dropTargetItem.data;
-var and__3822__auto____6583 = (drag_data__6581 === drop_data__6582);
-if(and__3822__auto____6583)
-{var and__3822__auto____6584 = (drop_data__6582 === instruisto.prefix_review.highlight_remove_display.call(null,event));
-if(and__3822__auto____6584)
+var drag_data__6591 = event.dragSourceItem.data;
+var drop_data__6592 = event.dropTargetItem.data;
+var and__3822__auto____6593 = (drag_data__6591 === drop_data__6592);
+if(and__3822__auto____6593)
+{var and__3822__auto____6594 = (drop_data__6592 === instruisto.prefix_review.highlight_remove_display.call(null,event));
+if(and__3822__auto____6594)
 {return (instruisto.prefix_review.highlight_remove_display.call(null,event) === null);
 } else
-{return and__3822__auto____6584;
+{return and__3822__auto____6594;
 }
 } else
-{return and__3822__auto____6583;
+{return and__3822__auto____6593;
 }
 });
 instruisto.prefix_review.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__6586 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__6586.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__6586,"dragover",instruisto.prefix_review.drag_drop_action);
-return drag__6586.init();
+var drag__6596 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__6596.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__6596,"dragover",instruisto.prefix_review.drag_drop_action);
+return drag__6596.init();
 });
 instruisto.prefix_review.start_review = (function start_review(){
 domina.set_styles_BANG_.call(null,domina.by_id.call(null,"prefix_def_ordered"),cljs.core.ObjMap.fromObject(["\uFDD0'display"],{"\uFDD0'display":"none"}));

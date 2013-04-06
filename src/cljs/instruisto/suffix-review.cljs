@@ -14,7 +14,7 @@
             (.-element 
               (.-dragSourceItem event))) 
           (.-id (.-element (.-dropTargetItem event))))
-  (d/set-text! (d/by-id "suffix-review-title") (str (d/text (.-element (.-dragSourceItem event))) " " (d/text (.-element (.-dropTargetItem event)))))
+  (d/set-text! (d/by-id "suffix-review-title") (str (d/text (.-element (.-dragSourceItem event))) " -> " (d/text (.-element (.-dropTargetItem event)))))
   (d/destroy! (.-element (.-dropTargetItem event)))
   (d/destroy! (.-element (.-dragSourceItem event))))
 

@@ -6,11 +6,11 @@ goog.require('domina');
 goog.require('goog.net.XhrIo');
 instruisto.correlative.init_correlative_toggle = (function init_correlative_toggle(elem){
 return domina.events.listen_BANG_.call(null,elem,"\uFDD0'click",(function (event){
-var display__6547 = [cljs.core.str(domina.text.call(null,elem))].join('');
-var hidden__6548 = [cljs.core.str(domina.attr.call(null,elem,"headers"))].join('');
+var display__6557 = [cljs.core.str(domina.text.call(null,elem))].join('');
+var hidden__6558 = [cljs.core.str(domina.attr.call(null,elem,"headers"))].join('');
 instruisto.effects.fade_out_elem.call(null,elem,500);
-domina.set_text_BANG_.call(null,elem,[cljs.core.str(hidden__6548)].join(''));
-domina.set_attr_BANG_.call(null,elem,"headers",[cljs.core.str(display__6547)].join(''));
+domina.set_text_BANG_.call(null,elem,[cljs.core.str(hidden__6558)].join(''));
+domina.set_attr_BANG_.call(null,elem,"headers",[cljs.core.str(display__6557)].join(''));
 return instruisto.effects.fade_in_elem.call(null,elem,500);
 }));
 });
