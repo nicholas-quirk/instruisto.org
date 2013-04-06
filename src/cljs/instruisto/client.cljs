@@ -16,6 +16,7 @@
             [instruisto.for-language-learner :as for-language-learner]
             [instruisto.for-programmer :as for-programmer]
             [instruisto.contact :as contact]
+            [instruisto.donate :as donate]
             [instruisto.pronoun :as pronoun]
             [instruisto.question :as question]
             [instruisto.preposition :as preposition]
@@ -53,6 +54,11 @@
                  (fn [event]
                    (click-defaults event (d/by-id "contact-section"))
                    (contact/start-contact)))
+ 	(events/listen! (d/by-id "link-donate")
+                 :click
+                 (fn [event]
+                   (click-defaults event (d/by-id "donate-section"))
+                   (donate/start-donate)))  
 	(events/listen! (d/by-id "link-introduction")
 	                :click
 	                (fn [event]

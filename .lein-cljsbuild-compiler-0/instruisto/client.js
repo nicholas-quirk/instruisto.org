@@ -19,6 +19,7 @@ goog.require('instruisto.for_language_learner');
 goog.require('instruisto.suffix_review');
 goog.require('instruisto.effects');
 goog.require('goog.net.XhrIo');
+goog.require('instruisto.donate');
 goog.require('instruisto.particle');
 goog.require('instruisto.suffix');
 goog.require('instruisto.plural');
@@ -49,6 +50,10 @@ return instruisto.for_programmer.start_for_programmer.call(null);
 domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-contact"),"\uFDD0'click",(function (event){
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"contact-section"));
 return instruisto.contact.start_contact.call(null);
+}));
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-donate"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"donate-section"));
+return instruisto.donate.start_donate.call(null);
 }));
 domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-introduction"),"\uFDD0'click",(function (event){
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"introduction-section"));

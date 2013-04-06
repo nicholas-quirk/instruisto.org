@@ -29813,6 +29813,15 @@ instruisto.suffix_review.start_suffix_review = function start_suffix_review() {
     return instruisto.suffix_review.start_review.call(null)
   })
 };
+goog.provide("instruisto.donate");
+goog.require("cljs.core");
+goog.require("instruisto.effects");
+goog.require("domina.events");
+goog.require("domina");
+goog.require("goog.net.XhrIo");
+instruisto.donate.start_donate = function start_donate() {
+  return null
+};
 goog.provide("instruisto.correlative");
 goog.require("cljs.core");
 goog.require("instruisto.effects");
@@ -29821,11 +29830,11 @@ goog.require("domina");
 goog.require("goog.net.XhrIo");
 instruisto.correlative.init_correlative_toggle = function init_correlative_toggle(elem) {
   return domina.events.listen_BANG_.call(null, elem, "\ufdd0'click", function(event) {
-    var display__22715 = [cljs.core.str(domina.text.call(null, elem))].join("");
-    var hidden__22716 = [cljs.core.str(domina.attr.call(null, elem, "headers"))].join("");
+    var display__6547 = [cljs.core.str(domina.text.call(null, elem))].join("");
+    var hidden__6548 = [cljs.core.str(domina.attr.call(null, elem, "headers"))].join("");
     instruisto.effects.fade_out_elem.call(null, elem, 500);
-    domina.set_text_BANG_.call(null, elem, [cljs.core.str(hidden__22716)].join(""));
-    domina.set_attr_BANG_.call(null, elem, "headers", [cljs.core.str(display__22715)].join(""));
+    domina.set_text_BANG_.call(null, elem, [cljs.core.str(hidden__6548)].join(""));
+    domina.set_attr_BANG_.call(null, elem, "headers", [cljs.core.str(display__6547)].join(""));
     return instruisto.effects.fade_in_elem.call(null, elem, 500)
   })
 };
@@ -29834,7 +29843,47 @@ instruisto.correlative.start_correlative = function start_correlative() {
   instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-tio"));
   instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-io"));
   instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-cxio"));
-  return instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-nenio"))
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-nenio"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-kiu"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-tiu"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-iu"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-cxiu"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-neniu"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-kia"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-tia"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-ia"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-cxia"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-nenia"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-kiel"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-tiel"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-iel"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-cxiel"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-neniel"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-kie"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-tie"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-ie"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-cxie"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-nenie"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-kiam"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-tiam"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-iam"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-cxiam"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-neniam"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-kiom"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-tiom"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-iom"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-cxiom"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-neniom"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-kial"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-tial"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-ial"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-cxial"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-nenial"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-kies"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-ties"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-ies"));
+  instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-cxies"));
+  return instruisto.correlative.init_correlative_toggle.call(null, domina.by_id.call(null, "correlative-nenies"))
 };
 goog.provide("instruisto.preposition");
 goog.require("cljs.core");
@@ -29989,6 +30038,7 @@ goog.require("instruisto.for_language_learner");
 goog.require("instruisto.suffix_review");
 goog.require("instruisto.effects");
 goog.require("goog.net.XhrIo");
+goog.require("instruisto.donate");
 goog.require("instruisto.particle");
 goog.require("instruisto.suffix");
 goog.require("instruisto.plural");
@@ -30019,6 +30069,10 @@ instruisto.client.main = function main() {
   domina.events.listen_BANG_.call(null, domina.by_id.call(null, "link-contact"), "\ufdd0'click", function(event) {
     instruisto.client.click_defaults.call(null, event, domina.by_id.call(null, "contact-section"));
     return instruisto.contact.start_contact.call(null)
+  });
+  domina.events.listen_BANG_.call(null, domina.by_id.call(null, "link-donate"), "\ufdd0'click", function(event) {
+    instruisto.client.click_defaults.call(null, event, domina.by_id.call(null, "donate-section"));
+    return instruisto.donate.start_donate.call(null)
   });
   domina.events.listen_BANG_.call(null, domina.by_id.call(null, "link-introduction"), "\ufdd0'click", function(event) {
     instruisto.client.click_defaults.call(null, event, domina.by_id.call(null, "introduction-section"));
