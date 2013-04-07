@@ -15,7 +15,7 @@
     :next "who"} 
   :who {
     :title "Who?"
-    :body "An exact number of Esperanto speakers is unknown since the language has no homeland. Numbers show anywhere between 10,000 – 2,000,000 L2 speakers. Regardless of the number of speakers, Esperanto is an active language with the World Congress of Esperanto held annually. There is a thriving community of Esperanto speakers producing music, books, pod-casts and websites around the language. Even if you don't become a fluent Esperanto speaker, learning the language will prime you when learning another foreign language."
+    :body "An exact number of Esperanto speakers is unknown since the language has no homeland. Numbers show anywhere between 10,000 – 2,000,000 L2 speakers. Regardless of the number of speakers, Esperanto is an active language with the World Congress of Esperanto held annually. There is a thriving community of Esperanto speakers producing music, books, podcasts and websites around the language. Even if you don't become a fluent Esperanto speaker, learning the language will prime you when learning another foreign language."
     :next "what"}})
 
 (defn load-next-section [m]

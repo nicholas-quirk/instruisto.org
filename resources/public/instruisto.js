@@ -29699,8 +29699,8 @@ goog.require("domina");
 goog.require("goog.net.XhrIo");
 instruisto.basic_grammar.basic_grammar_map = cljs.core.ObjMap.fromObject(["\ufdd0'noun", "\ufdd0'adj", "\ufdd0'verb", "\ufdd0'verb-tense", "\ufdd0'verb-conditional", "\ufdd0'verb-imperative", "\ufdd0'adverb", "\ufdd0'object"], {"\ufdd0'noun":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Nouns (Substantivoj)", "\ufdd0'body":"hundo, tablo, birdo, koloro \r\n\r\nJust by reading these words aloud, you probably already know what they are. They are dog, table, bird and color respectively. You may have also noticed they all end in -o. This isn't a coincidence. All nouns (persons, places and things) end in -o.", 
 "\ufdd0'next":"adj"}), "\ufdd0'adj":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Adjectives (Adjektivoj)", "\ufdd0'body":"bela, granda, interesa, longa \r\n\r\nAdjectives follow a similar rule as nouns, but all adjectives end in -a. I'm sure you already guessed that the words are beautiful, large, interesting, and long.", "\ufdd0'next":"verb"}), "\ufdd0'verb":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Verbs (Verboj)", 
-"\ufdd0'body":"Verbs in any language are more complex than nouns or adjectives. Without verbs, nothing would get done. But we also need to know when something is done. Esperanto follows verb conjugation like in Romance languages, but all verbs are regular. There are no exceptions! The infinitive ending for verbs is -i, i.e. esti = to be.", "\ufdd0'next":"verb-tense"}), "\ufdd0'verb-tense":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Verb Tenses", "\ufdd0'body":"If esti means to be, we need a way of expressing verb tense (past, present and future). The verb endings for these are -is, -as and -os respectively.\r\n\r\nMi estis = I was \r\n\r\nMi estas = I am \r\n\r\nMi estas = I will be", 
-"\ufdd0'next":"verb-conditional"}), "\ufdd0'verb-conditional":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Verb Conditional", "\ufdd0'body":"The word would is considered fluff in English when compared to Esperanto. Would proceeds a verb, and thus can be part of the verb itself. We use the ending -us to indicate when we would have something happen.\r\n\r\nEstus bone. = It would be good. \r\n\r\nEstus bone, se vi learnus Esperanton. = If would be good, if you would learn Esperanto. Note: Esperanton is not a typo. Stay tuned.", 
+"\ufdd0'body":"Verbs in any language are more complex than nouns or adjectives. Without verbs, nothing would get done. But we also need to know when something is done. Esperanto follows verb conjugation like in Romance languages, but all verbs are regular. There are no exceptions! The infinitive ending for verbs is -i, i.e. esti = to be.", "\ufdd0'next":"verb-tense"}), "\ufdd0'verb-tense":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Verb Tenses", "\ufdd0'body":"If esti means to be, we need a way of expressing verb tense (past, present and future). The verb endings for these are -is, -as and -os respectively.\r\n\r\nMi estis = I was \r\n\r\nMi estas = I am \r\n\r\nMi estos = I will be", 
+"\ufdd0'next":"verb-conditional"}), "\ufdd0'verb-conditional":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Verb Conditional", "\ufdd0'body":"The word 'would' is considered fluff in English when compared to Esperanto. Would proceeds a verb, and thus can be part of the verb itself. We use the ending -us to indicate when we would have something happen.\r\n\r\nEstus bone. = It would be good. \r\n\r\nEstus bone, se vi learnus Esperanton. = If would be good, if you would learn Esperanto. Note: Esperanton is not a typo. Stay tuned.", 
 "\ufdd0'next":"verb-imperative"}), "\ufdd0'verb-imperative":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Verb Imperative", "\ufdd0'body":"Sometimes you just want to yell at someone to do something. In this instance we have the -u ending. This is useful for when you want to use a command.\r\n\r\nKantu! = Sing! \r\n\r\nKuru! = Run! \r\n\r\nEstu silenta! = Be quiet!", "\ufdd0'next":"adverb"}), "\ufdd0'adverb":cljs.core.ObjMap.fromObject(["\ufdd0'title", 
 "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Adverbs (Adverboj)", "\ufdd0'body":"Adverbs describe verbs. Adverbs in English tend to end in -ly. In Esperanto you can turn a word into an adverb by adding the -e ending.\r\n\r\nThe adjectives bela, granda, interesa and longa used earlier are bele, grande, interese and longe in their adverb form.\r\n\r\nAdverbs precede verbs, so you might say something like 'Mi rapide legis la libro.', which means 'I quickly read the book.'", "\ufdd0'next":"object"}), 
 "\ufdd0'object":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Object (Objekto)", "\ufdd0'body":'The -n ending is used to mark the object of a sentenace. Remember back to the sentence "Estus bone, se vi learnus Esperanton.", here the word Esperanto is the object and takes the -n ending. This can take sometime to grasp for an English speaker, because the subject and object of a sentence is determined by word order. Generally, a verb proceeds an object. The easiest way to remember the rules are:\r\n\r\nWho (or what) is doing the action? That\'s the subject.\r\n\r\nWho (or what) is on the other end of the action, "receiving" it? That\'s the object.\r\n\r\nMi vidas vin. = I see you.\r\n\r\nMin vidas vi. = You see me.', 
@@ -29722,6 +29722,15 @@ instruisto.basic_grammar.start_basic_grammar = function start_basic_grammar() {
     domina.events.prevent_default.call(null, event);
     return instruisto.basic_grammar.load_next_grammar_section.call(null, null)
   })
+};
+goog.provide("instruisto.reference");
+goog.require("cljs.core");
+goog.require("instruisto.effects");
+goog.require("domina.events");
+goog.require("domina");
+goog.require("goog.net.XhrIo");
+instruisto.reference.start_reference = function start_reference() {
+  return null
 };
 goog.provide("instruisto.for_programmer");
 goog.require("cljs.core");
@@ -29976,7 +29985,7 @@ goog.require("domina");
 goog.require("goog.net.XhrIo");
 instruisto.introduction.introduction_map = cljs.core.ObjMap.fromObject(["\ufdd0'what", "\ufdd0'why", "\ufdd0'who"], {"\ufdd0'what":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"What?", "\ufdd0'body":"Esperanto is the most popular constructed international auxiliary language. It was created in 1887 by L. L. Zamenhof, a Polish doctor and linguist. The language is heavily influenced by Romance, Germanic and Slavic languages. If you already speak a European language then learning Esperanto is relatively easy. The language consists of regular verbs and a prefix/suffix system for word building. By knowing only a couple hundred root words and all the prefixes and suffixes, your vocabulary can increase greatly.", 
 "\ufdd0'next":"why"}), "\ufdd0'why":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Why?", "\ufdd0'body":"Esperanto was created in a region of Poland where there were many languages spoken. Zamenhof understood that distrust and hatred between groups of people started with miscommunication. If people could all speak a common language, that was independent of any group or region, then all parties would be on equal grounds. Neither person communicating would be inferior to the other.", 
-"\ufdd0'next":"who"}), "\ufdd0'who":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Who?", "\ufdd0'body":"An exact number of Esperanto speakers is unknown since the language has no homeland. Numbers show anywhere between 10,000 \u2013 2,000,000 L2 speakers. Regardless of the number of speakers, Esperanto is an active language with the World Congress of Esperanto held annually. There is a thriving community of Esperanto speakers producing music, books, pod-casts and websites around the language. Even if you don't become a fluent Esperanto speaker, learning the language will prime you when learning another foreign language.", 
+"\ufdd0'next":"who"}), "\ufdd0'who":cljs.core.ObjMap.fromObject(["\ufdd0'title", "\ufdd0'body", "\ufdd0'next"], {"\ufdd0'title":"Who?", "\ufdd0'body":"An exact number of Esperanto speakers is unknown since the language has no homeland. Numbers show anywhere between 10,000 \u2013 2,000,000 L2 speakers. Regardless of the number of speakers, Esperanto is an active language with the World Congress of Esperanto held annually. There is a thriving community of Esperanto speakers producing music, books, podcasts and websites around the language. Even if you don't become a fluent Esperanto speaker, learning the language will prime you when learning another foreign language.", 
 "\ufdd0'next":"what"})});
 instruisto.introduction.load_next_section = function load_next_section(m) {
   var entry_map__6563 = m == null ? cljs.core._lookup.call(null, instruisto.introduction.introduction_map, cljs.core.keyword.call(null, domina.attr.call(null, domina.by_id.call(null, "introduction-link"), "title")), null) : m;
@@ -30076,21 +30085,21 @@ goog.require("goog.fx");
 goog.require("goog.fx.DragDrop");
 goog.require("goog.net.XhrIo");
 instruisto.particle_review.drag_drop_action = function drag_drop_action(event) {
-  var drag_data__54166 = event.dragSourceItem.data;
-  var drop_data__54167 = event.dropTargetItem.data;
-  var and__3822__auto____54168 = drag_data__54166 === drop_data__54167;
-  if(and__3822__auto____54168) {
-    drop_data__54167 === domina.set_text_BANG_.call(null, domina.by_id.call(null, "particle-trans"), drag_data__54166)
+  var drag_data__6570 = event.dragSourceItem.data;
+  var drop_data__6571 = event.dropTargetItem.data;
+  var and__3822__auto____6572 = drag_data__6570 === drop_data__6571;
+  if(and__3822__auto____6572) {
+    drop_data__6571 === domina.set_text_BANG_.call(null, domina.by_id.call(null, "particle-trans"), drag_data__6570)
   }else {
-    and__3822__auto____54168
+    and__3822__auto____6572
   }
   return null
 };
 instruisto.particle_review.init_drag_drop = function init_drag_drop(drag_id, drop_id, data) {
-  var drag__54170 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
-  drag__54170.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
-  goog.events.listen(drag__54170, "dragover", instruisto.particle_review.drag_drop_action);
-  return drag__54170.init()
+  var drag__6574 = new goog.fx.DragDrop(domina.by_id.call(null, drag_id), data);
+  drag__6574.addTarget(new goog.fx.DragDrop(domina.by_id.call(null, drop_id), data));
+  goog.events.listen(drag__6574, "dragover", instruisto.particle_review.drag_drop_action);
+  return drag__6574.init()
 };
 instruisto.particle_review.start_particle_review = function start_particle_review() {
   instruisto.particle_review.init_drag_drop.call(null, "particle-ant-end-drag", "particle-skrib-drop", "writing");
@@ -30136,6 +30145,7 @@ goog.provide("instruisto.client");
 goog.require("cljs.core");
 goog.require("instruisto.basic_grammar_review_1");
 goog.require("instruisto.preposition");
+goog.require("instruisto.reference");
 goog.require("instruisto.contact");
 goog.require("instruisto.basic_grammar_review_2");
 goog.require("instruisto.introduction");
@@ -30257,9 +30267,13 @@ instruisto.client.main = function main() {
     instruisto.client.click_defaults.call(null, event, domina.by_id.call(null, "particle-section"));
     return instruisto.particle.start_particle.call(null)
   });
-  return domina.events.listen_BANG_.call(null, domina.by_id.call(null, "link-particle-review"), "\ufdd0'click", function(event) {
+  domina.events.listen_BANG_.call(null, domina.by_id.call(null, "link-particle-review"), "\ufdd0'click", function(event) {
     instruisto.client.click_defaults.call(null, event, domina.by_id.call(null, "particle-review-section"));
     return instruisto.particle_review.start_particle_review.call(null)
+  });
+  return domina.events.listen_BANG_.call(null, domina.by_id.call(null, "link-reference"), "\ufdd0'click", function(event) {
+    instruisto.client.click_defaults.call(null, event, domina.by_id.call(null, "reference-section"));
+    return instruisto.reference.start_reference.call(null)
   })
 };
 goog.exportSymbol("instruisto.client.main", instruisto.client.main);

@@ -1,3 +1,4 @@
+/* FONTS */
 @font-face {
     font-family: 'Cantarell';
     src: url('fonts/Cantarell-Regular.ttf');
@@ -12,6 +13,8 @@
     font-family: 'Cantarell-Oblique';
     src: url('fonts/Cantarell-Oblique.ttf');
 }
+
+/* GLOBAL */
 
 body {
     background-color: #BFE3BA;
@@ -40,9 +43,15 @@ h2 {
 
 a { text-decoration: none; }
 
-a:link, a:visited, a:hover, a:active { color: #FFFFFF }
+a:link, a:visited, a:hover a:active { color: #FFFFFF }
 
 td {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.rounded {
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;

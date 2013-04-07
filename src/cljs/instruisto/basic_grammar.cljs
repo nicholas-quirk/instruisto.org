@@ -20,11 +20,11 @@
     :next "verb-tense"}
   :verb-tense {
     :title "Verb Tenses"
-    :body "If esti means to be, we need a way of expressing verb tense (past, present and future). The verb endings for these are -is, -as and -os respectively.\u000D\u000A\u000D\u000AMi estis = I was \u000D\u000A\u000D\u000AMi estas = I am \u000D\u000A\u000D\u000AMi estas = I will be"
+    :body "If esti means to be, we need a way of expressing verb tense (past, present and future). The verb endings for these are -is, -as and -os respectively.\u000D\u000A\u000D\u000AMi estis = I was \u000D\u000A\u000D\u000AMi estas = I am \u000D\u000A\u000D\u000AMi estos = I will be"
     :next "verb-conditional"}
   :verb-conditional {
     :title "Verb Conditional"
-    :body "The word would is considered fluff in English when compared to Esperanto. Would proceeds a verb, and thus can be part of the verb itself. We use the ending -us to indicate when we would have something happen.\u000D\u000A\u000D\u000AEstus bone. = It would be good. \u000D\u000A\u000D\u000AEstus bone, se vi learnus Esperanton. = If would be good, if you would learn Esperanto. Note: Esperanton is not a typo. Stay tuned."
+    :body "The word 'would' is considered fluff in English when compared to Esperanto. Would proceeds a verb, and thus can be part of the verb itself. We use the ending -us to indicate when we would have something happen.\u000D\u000A\u000D\u000AEstus bone. = It would be good. \u000D\u000A\u000D\u000AEstus bone, se vi learnus Esperanton. = If would be good, if you would learn Esperanto. Note: Esperanton is not a typo. Stay tuned."
     :next "verb-imperative"}
   :verb-imperative {
     :title "Verb Imperative"

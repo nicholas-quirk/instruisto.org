@@ -2,6 +2,7 @@ goog.provide('instruisto.client');
 goog.require('cljs.core');
 goog.require('instruisto.basic_grammar_review_1');
 goog.require('instruisto.preposition');
+goog.require('instruisto.reference');
 goog.require('instruisto.contact');
 goog.require('instruisto.basic_grammar_review_2');
 goog.require('instruisto.introduction');
@@ -123,9 +124,13 @@ domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-particle"),"\u
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"particle-section"));
 return instruisto.particle.start_particle.call(null);
 }));
-return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-particle-review"),"\uFDD0'click",(function (event){
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-particle-review"),"\uFDD0'click",(function (event){
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"particle-review-section"));
 return instruisto.particle_review.start_particle_review.call(null);
+}));
+return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-reference"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"reference-section"));
+return instruisto.reference.start_reference.call(null);
 }));
 });
 goog.exportSymbol('instruisto.client.main', instruisto.client.main);

@@ -23,6 +23,7 @@
             [instruisto.particle :as particle]
             [instruisto.particle-review :as particle-review]
             [instruisto.correlative :as correlative]
+            [instruisto.reference :as reference]
             [instruisto.effects :as effects]))
 
 (defn click-defaults [event elem]
@@ -148,4 +149,9 @@
                  :click
                  (fn [event]
                    (click-defaults event (d/by-id "particle-review-section"))
-                   (particle-review/start-particle-review))))
+                   (particle-review/start-particle-review)))
+	  (events/listen! (d/by-id "link-reference")
+	           :click
+	           (fn [event]
+	             (click-defaults event (d/by-id "reference-section"))
+	             (reference/start-reference))))
