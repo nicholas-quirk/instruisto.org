@@ -15,25 +15,25 @@ domina.destroy_BANG_.call(null,event.dropTargetItem.element);
 return domina.destroy_BANG_.call(null,event.dragSourceItem.element);
 });
 instruisto.preposition.drag_drop_action = (function drag_drop_action(event){
-var drag_data__34503 = event.dragSourceItem.data;
-var drop_data__34504 = event.dropTargetItem.data;
-var and__3822__auto____34505 = (drag_data__34503 === drop_data__34504);
-if(and__3822__auto____34505)
-{var and__3822__auto____34506 = (drop_data__34504 === instruisto.preposition.highlight_remove_display.call(null,event));
-if(and__3822__auto____34506)
+var drag_data__6617 = event.dragSourceItem.data;
+var drop_data__6618 = event.dropTargetItem.data;
+var and__3822__auto____6619 = (drag_data__6617 === drop_data__6618);
+if(and__3822__auto____6619)
+{var and__3822__auto____6620 = (drop_data__6618 === instruisto.preposition.highlight_remove_display.call(null,event));
+if(and__3822__auto____6620)
 {return (instruisto.preposition.highlight_remove_display.call(null,event) === null);
 } else
-{return and__3822__auto____34506;
+{return and__3822__auto____6620;
 }
 } else
-{return and__3822__auto____34505;
+{return and__3822__auto____6619;
 }
 });
 instruisto.preposition.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__34508 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__34508.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__34508,"dragover",instruisto.preposition.drag_drop_action);
-return drag__34508.init();
+var drag__6622 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__6622.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__6622,"dragover",instruisto.preposition.drag_drop_action);
+return drag__6622.init();
 });
 instruisto.preposition.start_review = (function start_review(){
 domina.set_styles_BANG_.call(null,domina.by_id.call(null,"preposition_def_ordered"),cljs.core.ObjMap.fromObject(["\uFDD0'display"],{"\uFDD0'display":"none"}));

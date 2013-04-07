@@ -18,7 +18,7 @@
   <body>
   	<script type="text/javascript" src="js/goog/base.js"></script>
     <link rel="stylesheet" href="instruisto.css">
-    <h1>Instruisto</h1>
+    <h1 id="instruisto-header">Instruisto</h1>
     <h2>Learn Esperanto for the Greater Good</h2>
     <div id="for_info_section">
     	<a href="#" id="link-for-language-learner">For Language Learners</a> |
@@ -45,6 +45,7 @@
 		<div><a href="#" id="link-correlative">Correlative</a></div>
 		<div><a href="#" id="link-preposition">Preposition</a></div>
 		<div><a href="#" id="link-particle">Particle</a></div>
+		<div><a href="#" id="link-particle-review">Particle Review</a></div>
 	</nav>
 	</div>
 	<div class="float_left" id="content_panel">
@@ -985,9 +986,69 @@
 	    	<h3 id="particle-header">Particles</h3>
 	    	<h4 id="particle-title"></h4>
 	    	<p id="particle-body">
-	    		Table of Sorts
+	    		<p>
+	    			A participle is a word that presents an action as a quality or state of something. In English there are two types of particles, present and past. Present particles typically end in -ing while past particles end in -ed. In Esperanto, there are six types of particles shown below:
+	    		</p>
+	    		<table style="width:100%;">
+	    			<thead>
+	    				<tr>
+	    					<th>Active Particle</th>
+	    					<th>Passive Particle</th>
+	    					<th>Meaning</th>
+	    				</tr>
+	    			</thead>
+	    			<tbody>
+	    				<tr>
+	    					<td>-ant-</td>
+	    					<td>-at-</td>
+							<td>happening now</td>
+	    				</tr>
+	    				<tr>
+	    					<td>-int-</td>
+	    					<td>-it-</td>
+	    					<td>has happened</td>
+	    				</tr>
+	    				<tr>
+	    					<td>-ont-</td>
+	    					<td>-ot-</td>
+	    					<td>will be happening</td>
+	    				</tr>	    					    				
+	    			</tbody>
+	    		</table>
+	    		<p>The active particle denotes when something is or has done the action. The passive particle denotes when the action was done to something else.</p>
+	    		<p>For example, you might say konstruanta (constructing) or konstruata (being constructed).</p>
+	    		<p>You may find that particles slow your reading, because they take a little extra time to understand the context for English speakers.</p>
 	    	<p/>
-	    </section>	
+	    </section>
+	    <section id="particle-review-section" style="display:none;" class="content-secton">
+	    	<h3 id="particle-review-header">Particle Review</h3>
+	    	<h4 id="particle-review-title">Drag the word endings to each word, try guessing what the new word will be.</h4>
+			<div class="float_left">
+				<div class="float_left droppable" id="particle-skrib-drop">skrib-</div>
+				<br style="clear:both;"/>
+				<div class="float_left droppable" id="particle-konstru-drop">konstru-</div>
+				<br style="clear:both;"/>
+			</div>
+			<div class="float_left">
+				<br style="clear:both;"/>
+				<div class="float_left draggable" id="particle-trans" style="text-align:right;"></div>
+			</div>
+			<div class="float_right">
+				<div class="float_right draggable" id="particle-ant-end-drag">-ant(a)</div>
+				<br style="clear:both;"/>
+				<div class="float_right draggable" id="particle-int-end-drag">-int(a)</div>
+				<br style="clear:both;"/>
+				<div class="float_right draggable" id="particle-ont-end-drag">-ont(a)</div>
+				<br style="clear:both;"/>
+				<div class="float_right draggable" id="particle-at-end-drag">-at(a)</div>
+				<br style="clear:both;"/>
+				<div class="float_right draggable" id="particle-it-end-drag">-it(a)</div>
+				<br style="clear:both;"/>
+				<div class="float_right draggable" id="particle-ot-end-drag">-ot(a)</div>
+				<br style="clear:both;"/>
+			</div>
+			<br style="clear:both;"/>		    		    		    	
+	    </section>	    
     </div>
     <script src="instruisto.js" type="text/javascript"></script>
     <script>

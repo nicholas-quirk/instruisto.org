@@ -21,6 +21,7 @@
             [instruisto.question :as question]
             [instruisto.preposition :as preposition]
             [instruisto.particle :as particle]
+            [instruisto.particle-review :as particle-review]
             [instruisto.correlative :as correlative]
             [instruisto.effects :as effects]))
 
@@ -142,4 +143,9 @@
                  :click
                  (fn [event]
                    (click-defaults event (d/by-id "particle-section"))
-                   (particle/start-particle))))
+                   (particle/start-particle)))
+    (events/listen! (d/by-id "link-particle-review")
+                 :click
+                 (fn [event]
+                   (click-defaults event (d/by-id "particle-review-section"))
+                   (particle-review/start-particle-review))))

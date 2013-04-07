@@ -8,6 +8,7 @@ goog.require('instruisto.introduction');
 goog.require('domina.events');
 goog.require('instruisto.alphabet');
 goog.require('instruisto.prefix_review');
+goog.require('instruisto.particle_review');
 goog.require('instruisto.plural_review');
 goog.require('instruisto.pronoun');
 goog.require('instruisto.prefix');
@@ -118,9 +119,13 @@ domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-preposition"),
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"preposition-section"));
 return instruisto.preposition.start_preposition.call(null);
 }));
-return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-particle"),"\uFDD0'click",(function (event){
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-particle"),"\uFDD0'click",(function (event){
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"particle-section"));
 return instruisto.particle.start_particle.call(null);
+}));
+return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-particle-review"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"particle-review-section"));
+return instruisto.particle_review.start_particle_review.call(null);
 }));
 });
 goog.exportSymbol('instruisto.client.main', instruisto.client.main);

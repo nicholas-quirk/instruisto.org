@@ -64,6 +64,20 @@ div.formatted_text {
  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
+#instruisto-header {
+	border: 2px solid black;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	width:500px;
+	margin: auto;
+	color: #FFFFFF;
+	background-color: #679267; /*#49796B;*/	
+	font-size: 36px;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+
 #nav_panel {
 	width: 200px;
 	border: 2px solid black;

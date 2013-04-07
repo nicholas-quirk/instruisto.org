@@ -15,25 +15,25 @@ domina.destroy_BANG_.call(null,event.dropTargetItem.element);
 return domina.destroy_BANG_.call(null,event.dragSourceItem.element);
 });
 instruisto.pronoun.drag_drop_action = (function drag_drop_action(event){
-var drag_data__6619 = event.dragSourceItem.data;
-var drop_data__6620 = event.dropTargetItem.data;
-var and__3822__auto____6621 = (drag_data__6619 === drop_data__6620);
-if(and__3822__auto____6621)
-{var and__3822__auto____6622 = (drop_data__6620 === instruisto.pronoun.highlight_remove_display.call(null,event));
-if(and__3822__auto____6622)
+var drag_data__6627 = event.dragSourceItem.data;
+var drop_data__6628 = event.dropTargetItem.data;
+var and__3822__auto____6629 = (drag_data__6627 === drop_data__6628);
+if(and__3822__auto____6629)
+{var and__3822__auto____6630 = (drop_data__6628 === instruisto.pronoun.highlight_remove_display.call(null,event));
+if(and__3822__auto____6630)
 {return (instruisto.pronoun.highlight_remove_display.call(null,event) === null);
 } else
-{return and__3822__auto____6622;
+{return and__3822__auto____6630;
 }
 } else
-{return and__3822__auto____6621;
+{return and__3822__auto____6629;
 }
 });
 instruisto.pronoun.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__6624 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__6624.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__6624,"dragover",instruisto.pronoun.drag_drop_action);
-return drag__6624.init();
+var drag__6632 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__6632.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__6632,"dragover",instruisto.pronoun.drag_drop_action);
+return drag__6632.init();
 });
 instruisto.pronoun.start_review = (function start_review(){
 domina.set_styles_BANG_.call(null,domina.by_id.call(null,"pronoun_def_ordered"),cljs.core.ObjMap.fromObject(["\uFDD0'display"],{"\uFDD0'display":"none"}));
