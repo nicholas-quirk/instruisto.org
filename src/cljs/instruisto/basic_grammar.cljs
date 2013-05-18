@@ -32,7 +32,7 @@
     :next "adverb" }
   :adverb {
     :title "Adverbs (Adverboj)"
-    :body "Adverbs describe verbs. Adverbs in English tend to end in -ly. In Esperanto you can turn a word into an adverb by adding the -e ending.\u000D\u000A\u000D\u000AThe adjectives bela, granda, interesa and longa used earlier are bele, grande, interese and longe in their adverb form.\u000D\u000A\u000D\u000AAdverbs precede verbs, so you might say something like 'Mi rapide legis la libro.', which means 'I quickly read the book.'" 
+    :body "Adverbs describe verbs. Adverbs in English tend to end in -ly. In Esperanto you can turn a word into an adverb by adding the -e ending.\u000D\u000A\u000D\u000AThe adjectives bela, granda, interesa and longa used earlier are bele, grande, interese and longe in their adverb form.\u000D\u000A\u000D\u000AAdverbs precede verbs, so you might say something like 'Mi rapide legis libron.', which means 'I quickly read the book.'" 
     :next "object"} 
   :object {
     :title "Object (Objekto)"
