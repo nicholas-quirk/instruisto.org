@@ -13,7 +13,7 @@
                  [domina "1.0.0"]
                  [compojure "1.1.0"]
                  [ring "1.0.2"]
-                 [enfocus "1.0.0-beta3"]]
+                 [enfocus "1.0.1"]]
   
   :ring {:handler instruisto.server/app}
   
