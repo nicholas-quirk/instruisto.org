@@ -9,10 +9,11 @@ goog.require('instruisto.introduction');
 goog.require('domina.events');
 goog.require('instruisto.alphabet');
 goog.require('instruisto.prefix_review');
-goog.require('instruisto.particle_review');
 goog.require('instruisto.plural_review');
+goog.require('instruisto.participle');
 goog.require('instruisto.pronoun');
 goog.require('instruisto.prefix');
+goog.require('instruisto.participle_review');
 goog.require('instruisto.basic_grammar');
 goog.require('instruisto.question');
 goog.require('instruisto.for_programmer');
@@ -22,7 +23,6 @@ goog.require('instruisto.suffix_review');
 goog.require('instruisto.effects');
 goog.require('goog.net.XhrIo');
 goog.require('instruisto.donate');
-goog.require('instruisto.particle');
 goog.require('instruisto.suffix');
 goog.require('instruisto.plural');
 goog.require('instruisto.correlative');
@@ -120,13 +120,13 @@ domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-preposition"),
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"preposition-section"));
 return instruisto.preposition.start_preposition.call(null);
 }));
-domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-particle"),"\uFDD0'click",(function (event){
-instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"particle-section"));
-return instruisto.particle.start_particle.call(null);
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-participle"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"participle-section"));
+return instruisto.participle.start_participle.call(null);
 }));
-domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-particle-review"),"\uFDD0'click",(function (event){
-instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"particle-review-section"));
-return instruisto.particle_review.start_particle_review.call(null);
+domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-participle-review"),"\uFDD0'click",(function (event){
+instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"participle-review-section"));
+return instruisto.participle_review.start_participle_review.call(null);
 }));
 return domina.events.listen_BANG_.call(null,domina.by_id.call(null,"link-reference"),"\uFDD0'click",(function (event){
 instruisto.client.click_defaults.call(null,event,domina.by_id.call(null,"reference-section"));

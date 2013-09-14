@@ -8,7 +8,7 @@
 (def basic-grammar-map {
   :noun {
     :title "Nouns (Substantivoj)" 
-    :body "hundo, tablo, birdo, koloro \u000D\u000A\u000D\u000AJust by reading these words aloud, you probably already know what they are. They are dog, table, bird and color respectively. You may have also noticed they all end in -o. This isn't a coincidence. All nouns (persons, places and things) end in -o." 
+    :body "hundo, tablo, birdo, koloro \u000D\u000A\u000D\u000AJust by reading these words aloud, you probably already know what they are. They are dog, table, bird and color respectively. You may have also noticed they all end in -o. This isn't a coincidence. All nouns (persons, places and things) end in -o."
     :next "adj"}
   :adj {
     :title "Adjectives (Adjektivoj)"

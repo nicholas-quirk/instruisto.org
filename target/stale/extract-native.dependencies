@@ -1,1 +1,1 @@
-([:dependencies ([org.clojure/clojure "1.4.0"] [domina/domina "1.0.0"] [compojure/compojure "1.1.0"] [ring/ring "1.0.2"] [enfocus/enfocus "1.0.0-beta3"])])
+([:dependencies ([org.clojure/clojure "1.4.0"] [domina/domina "1.0.0"] [compojure/compojure "1.1.0"] [ring/ring "1.0.2"] [enfocus/enfocus "1.0.1"])])

@@ -20,8 +20,8 @@
             [instruisto.pronoun :as pronoun]
             [instruisto.question :as question]
             [instruisto.preposition :as preposition]
-            [instruisto.particle :as particle]
-            [instruisto.particle-review :as particle-review]
+            [instruisto.participle :as participle]
+            [instruisto.participle-review :as participle-review]
             [instruisto.correlative :as correlative]
             [instruisto.reference :as reference]
             [instruisto.effects :as effects]))
@@ -46,112 +46,112 @@
                   (fn [event]
                     (click-defaults event (d/by-id "for-langauge-learner-section"))
                     (for-language-learner/start-for-language-learner)))
-	(events/listen! (d/by-id "link-for-programmer")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "for-programmer-section"))
-                   (for-programmer/start-for-programmer)))
- 	(events/listen! (d/by-id "link-contact")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "contact-section"))
-                   (contact/start-contact)))
- 	(events/listen! (d/by-id "link-donate")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "donate-section"))
-                   (donate/start-donate)))  
-	(events/listen! (d/by-id "link-introduction")
-	                :click
-	                (fn [event]
-	                  (click-defaults event (d/by-id "introduction-section"))
-	                  (introduction/start-introduction)))
-	(events/listen! (d/by-id "link-alphabet")
-	                :click
-	                (fn [event]
-	                  (click-defaults event (d/by-id "alphabet-section"))
-	                  (alphabet/start-alphabet)))
-	(events/listen! (d/by-id "link-basic-grammar-review")
-	                :mouseover
-	                (fn [event]
-	                  (display-sub-cat "link-basic-grammar-review")))
-	(events/listen! (d/by-id "link-basic-grammar")
-	                :click
-	                (fn [event]
-	                  (click-defaults event (d/by-id "basic-grammar-section"))
-	                  (basic-grammar/start-basic-grammar)))
-	(events/listen! (d/by-id "link-basic-grammar-review-1")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "basic-grammar-review-1-section"))
-                   (basic-grammar-review-1/start-basic-grammar-review)))
-	(events/listen! (d/by-id "link-basic-grammar-review-2")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "basic-grammar-review-2-section"))
-                   (basic-grammar-review-2/start-basic-grammar-review)))
-	(events/listen! (d/by-id "link-plural")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "plural-section"))
-                   (plural/start-plural)))
-	(events/listen! (d/by-id "link-plural-review")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "plural-review-section"))
-                   (plural-review/start-plural-review)))
-	(events/listen! (d/by-id "link-prefix")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "prefix-section"))
-                   (prefix/start-prefix)))
- (events/listen! (d/by-id "link-prefix-review")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "prefix-review-section"))
-                   (prefix-review/start-prefix-review)))
- (events/listen! (d/by-id "link-suffix")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "suffix-section"))
-                   (suffix/start-suffix)))
- (events/listen! (d/by-id "link-suffix-review")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "suffix-review-section"))
-                   (suffix-review/start-suffix-review)))
- (events/listen! (d/by-id "link-pronoun")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "pronoun-section"))
-                   (pronoun/start-pronoun)))
+  (events/listen! (d/by-id "link-for-programmer")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "for-programmer-section"))
+                    (for-programmer/start-for-programmer)))
+  (events/listen! (d/by-id "link-contact")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "contact-section"))
+                    (contact/start-contact)))
+  (events/listen! (d/by-id "link-donate")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "donate-section"))
+                    (donate/start-donate)))  
+  (events/listen! (d/by-id "link-introduction")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "introduction-section"))
+                    (introduction/start-introduction)))
+  (events/listen! (d/by-id "link-alphabet")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "alphabet-section"))
+                    (alphabet/start-alphabet)))
+  (events/listen! (d/by-id "link-basic-grammar-review")
+                  :mouseover
+                  (fn [event]
+                    (display-sub-cat "link-basic-grammar-review")))
+  (events/listen! (d/by-id "link-basic-grammar")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "basic-grammar-section"))
+                    (basic-grammar/start-basic-grammar)))
+  (events/listen! (d/by-id "link-basic-grammar-review-1")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "basic-grammar-review-1-section"))
+                    (basic-grammar-review-1/start-basic-grammar-review)))
+  (events/listen! (d/by-id "link-basic-grammar-review-2")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "basic-grammar-review-2-section"))
+                    (basic-grammar-review-2/start-basic-grammar-review)))
+  (events/listen! (d/by-id "link-plural")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "plural-section"))
+                    (plural/start-plural)))
+  (events/listen! (d/by-id "link-plural-review")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "plural-review-section"))
+                    (plural-review/start-plural-review)))
+  (events/listen! (d/by-id "link-prefix")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "prefix-section"))
+                    (prefix/start-prefix)))
+  (events/listen! (d/by-id "link-prefix-review")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "prefix-review-section"))
+                    (prefix-review/start-prefix-review)))
+  (events/listen! (d/by-id "link-suffix")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "suffix-section"))
+                    (suffix/start-suffix)))
+  (events/listen! (d/by-id "link-suffix-review")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "suffix-review-section"))
+                    (suffix-review/start-suffix-review)))
+  (events/listen! (d/by-id "link-pronoun")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "pronoun-section"))
+                    (pronoun/start-pronoun)))
   (events/listen! (d/by-id "link-question")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "question-section"))
-                   (question/start-question)))
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "question-section"))
+                    (question/start-question)))
   (events/listen! (d/by-id "link-correlative")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "correlative-section"))
-                   (correlative/start-correlative)))
-   (events/listen! (d/by-id "link-preposition")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "preposition-section"))
-                   (preposition/start-preposition)))
-    (events/listen! (d/by-id "link-particle")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "particle-section"))
-                   (particle/start-particle)))
-    (events/listen! (d/by-id "link-particle-review")
-                 :click
-                 (fn [event]
-                   (click-defaults event (d/by-id "particle-review-section"))
-                   (particle-review/start-particle-review)))
-	  (events/listen! (d/by-id "link-reference")
-	           :click
-	           (fn [event]
-	             (click-defaults event (d/by-id "reference-section"))
-	             (reference/start-reference))))
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "correlative-section"))
+                    (correlative/start-correlative)))
+  (events/listen! (d/by-id "link-preposition")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "preposition-section"))
+                    (preposition/start-preposition)))
+  (events/listen! (d/by-id "link-participle")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "participle-section"))
+                    (participle/start-participle)))
+  (events/listen! (d/by-id "link-participle-review")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "participle-review-section"))
+                    (participle-review/start-participle-review)))
+  (events/listen! (d/by-id "link-reference")
+                  :click
+                  (fn [event]
+                    (click-defaults event (d/by-id "reference-section"))
+                    (reference/start-reference))))

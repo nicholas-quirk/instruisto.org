@@ -9,25 +9,20 @@ goog.require('goog.fx');
 goog.require('goog.fx.DragDrop');
 goog.require('goog.net.XhrIo');
 instruisto.basic_grammar_review_1.drag_drop_action = (function drag_drop_action(event){
-var drag_data__6473 = event.dragSourceItem.data;
-var drop_data__6474 = event.dropTargetItem.data;
-var and__3822__auto____6475 = (drag_data__6473 === drop_data__6474);
-if(and__3822__auto____6475)
-{var and__3822__auto____6476 = (drop_data__6474 === instruisto.effects.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
-if(and__3822__auto____6476)
-{return (instruisto.effects.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id) === null);
+var drag_data__57368 = event.dragSourceItem.data;
+var drop_data__57369 = event.dropTargetItem.data;
+var and__3822__auto____57370 = (drag_data__57368 === drop_data__57369);
+if(and__3822__auto____57370)
+{return (drop_data__57369 === instruisto.effects.drop_drop_correct.call(null,event.dragSourceItem.element.id,event.dropTargetItem.element.id));
 } else
-{return and__3822__auto____6476;
-}
-} else
-{return and__3822__auto____6475;
+{return and__3822__auto____57370;
 }
 });
 instruisto.basic_grammar_review_1.init_drag_drop = (function init_drag_drop(drag_id,drop_id,data){
-var drag__6478 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
-drag__6478.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
-goog.events.listen(drag__6478,"dragover",instruisto.basic_grammar_review_1.drag_drop_action);
-return drag__6478.init();
+var drag__57372 = (new goog.fx.DragDrop(domina.by_id.call(null,drag_id),data));
+drag__57372.addTarget((new goog.fx.DragDrop(domina.by_id.call(null,drop_id),data)));
+goog.events.listen(drag__57372,"dragover",instruisto.basic_grammar_review_1.drag_drop_action);
+return drag__57372.init();
 });
 instruisto.basic_grammar_review_1.start_basic_grammar_review = (function start_basic_grammar_review(){
 instruisto.basic_grammar_review_1.init_drag_drop.call(null,"bgr-noun-drag","bgr-noun-drop","noun");

@@ -10,7 +10,8 @@
 
 (defn drag-drop-action [event]
   (let [drag-data (.-data (.-dragSourceItem event)) drop-data (.-data (.-dropTargetItem event))]
-    (== drag-data drop-data (effects/drop-drop-correct (.-id (.-element (.-dragSourceItem event))) (.-id (.-element (.-dropTargetItem event)))) nil)))
+    (== drag-data drop-data 
+        (effects/drop-drop-correct (.-id (.-element (.-dragSourceItem event))) (.-id (.-element (.-dropTargetItem event)))) )))
 
 (defn init-drag-drop [drag-id drop-id data]
     (let [drag (goog.fx.DragDrop. (d/by-id drag-id) data)]
